@@ -1,7 +1,164 @@
-/* general styling */
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Roboto Slab", serif, Arial, Helvetica, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
 :root {
-  --general: #2a4766;
   --navibar: #1b1b1b;
+  --lightgeneral: #ffffff;
+  --hovercolor: #00ffff;
+  --currentback: #27365d;
+  --button1: rgb(148, 8, 136);
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  align-items: center;
+  background: var(--navibar);
+  padding: 15px 50px;
+  color: var(--lightgeneral);
+  /* white-space: nowrap; */
+}
+@media (max-width: 768px) {
+  .header {
+    /* white-space: wrap; */
+  }
+}
+.header .logo {
+  font-size: 20px;
+  color: var(--hovercolor);
+  font-weight: 500;
+  font-style: italic;
+  left: 0;
+  padding-right: 100px;
+}
+.header .nav_bar ul {
+  list-style: none;
+  overflow: hidden;
+}
+li {
+  display: inline-block;
+}
+li a {
+  text-decoration: none;
+  color: var(--button1);
+  padding: 0 16px;
+  font-size: 20px;
+  font-weight: 500;
+  display: block;
+  line-height: 50px;
+  transition: 0.25s;
+}
+li a:hover {
+  color: var(--hovercolor);
+  background: var(--currentback);
+}
+
+.home_image {
+  background-image: url("images/home-page-image.jpg");
+  background-size: cover;
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-color: rgba(0, 0, 0, 0.55);
+  opacity: 1;
+}
+.home_page ::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.55);
+}
+
+.landing_content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.name {
+  font-size: 50px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  display: inline-block;
+}
+.title {
+  font-size: 60px;
+  font-weight: bolder;
+  display: block;
+  white-space: nowrap;
+  left: 50%;
+  margin-bottom: 20px;
+  word-spacing: 2px;
+  text-shadow: 1.5px 1.5px black;
+  transition: 0s;
+}
+@media (max-width: 768px) {
+  .title {
+    white-space: wrap;
+    display: inline-block;
+    transition: 0s;
+    padding: 0;
+    text-shadow: none;
+  }
+  .name {
+    white-space: nowrap;
+    font-size: 30px;
+  }
+}
+.home_desc {
+  font-size: 20px;
+  display: block;
+  font-weight: 500;
+  /* white-space: wrap; */
+  margin-bottom: 30px;
+}
+.button {
+  padding: 12px 22px;
+  font-size: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  color: var(--lightgeneral);
+  background-color: var(--button1);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.5ms;
+}
+.button:hover {
+  color: var(--hovercolor);
+  text-decoration: underline;
+}
+/* 
+@media (max-width: 768px){
+  .home_page{
+    min-height: 30vh;
+  }
+  .name{
+    font-size: calc(1.525rem +  3.3vw);
+  }
+}
+/* general styling 
+:root {
+  --navibar: #1b1b1b;
+  --lightgeneral: #ffffff;
+  --hovercolor: #00ffff;
+  --currentback: #27365d;
 }
 * {
   margin: 0px;
@@ -10,22 +167,44 @@
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+  box-sizing: border-box;
 }
 
-/* Navigation Bar Styles */
+ testing  
+@media (max-width: 450px) {
+  h1{
+    font-size: 44px;
+  }
+}
+
+@media (max-width: 300px) {
+  h1{
+    font-size: 34px;
+  }
+}
+
+Navigation Bar Styles 
 nav {
   align-items: center;
+  position: fixed;
+}
+.nav_bar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 1000;
 }
 .nav_bar ul {
   list-style-type: none;
   background-color: var(--navibar);
+  opacity: 90%;
   padding: 0px;
   margin: 0px;
   top: 0px;
   text-align: center;
   justify-content: center;
-  position: relative;
-  overflow: hidden;
+  
   border-bottom: 2px solid var(--navibar);
 }
 .nav_bar li {
@@ -33,9 +212,10 @@ nav {
 }
 
 .nav_bar a {
-  color: #ffffff;
+  position: relative;
+  color: var(--lightgeneral);
   text-decoration: none;
-  padding: 25px 27px;
+  padding: 25px ;
   width: 100%;
   display: block;
   text-align: center;
@@ -43,25 +223,91 @@ nav {
   font-size: 20px;
   font-weight: bold;
 }
-/* Hide the link on small screens */
-.nav_bar .icom {
-}
-/* link hover color change */
+
+
+link hover color change
 .nav_bar a:hover {
-  color: aqua;
+  color: var(--hovercolor);
+  text-decoration: underline;
 }
 .nav_bar a.current {
-  background: rgb(39, 54, 93);
+  background: var(--currentback);
   background-clip: inherit;
 }
-/* Home page background image  */
-header {
+
+.header {
   text-align: center;
+  align-items: center;
   background-image: url("images/home-page-image.jpg");
+  background-size:cover;
+  background-position: center center;
+
   background-attachment: scroll;
-  background-size: cover;
+  
+  justify-content:center;
+ 
+  height: 100vh;
+  min-height: 300px;
+  width:100%;
   background-repeat: no-repeat;
-  height: 80vh;
+ 
+  display: flex;
+  
+  opacity: 20%;
 }
+@media(max-width:300px) {
+  .header{
+    background-image:  url("images/home-page-image.jpg");
+    background-size: contain; avoid image cropping
+    height: 100%;   
+    width:100%;
+    overflow-x: hidden;
+    background-position: center;
+    object-fit:fill;
+
+  }
+}media
+
+
+part 1: home landing page styling
 .landing_page {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0 auto;
+  min-height: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  
 }
+Media Query for small screens
+@media (max-width: 768px) {
+  .landing_page {
+     width: 95%; 
+    Make content take up more width on smaller screens
+    height: 100vh; 
+    padding: 10px; 
+    font-size: 14px;
+    margin: 5px;
+  }
+}
+.name{
+  margin-top: 100px;
+  margin-bottom: 20px;
+  font-size: 60px;
+  font-weight: bolder;
+}
+.title{
+  font-size: 75px;
+  font-weight: bolder;
+  margin-bottom: 50px;
+}
+.home_desc{
+  font-size: 18px;
+  margin: 0 100px 15px 100px; 
+  font-weight: 800;
+  text-align: center;
+  line-height: 1.75;
+  display: inline-grid;
+  /* color: rgba(25, 25, 26, 0.708); 
+}
+ */
