@@ -13,42 +13,45 @@
       rel="stylesheet"
     />
   </head>
-  <!--Navigation Bar-->
+
   <body>
-    <!-- Part 1: Home Landing Page -->
+    <!-- Part 1: Navigation Bar -->
     <header class="header">
-      <!-- <div class="logo">Ms. Theresa</div> -->
-      <nav class="nav_bar">
+      <div class="logo">Ms. Theresa</div>
+      <nav class="nav_bar" id="nav_bar_id">
         <ul>
-          <li class="logo">Ms. Theresa</li>
-          <li><a href="index.html" class="current">HOME</a></li>
+          <li><a href="#about">HOME</a></li>
           <li><a href="about.html">ABOUT ME</a></li>
           <li><a href="resume.html">RESUME</a></li>
           <li><a href="research.html">RESEARCH</a></li>
           <li><a href="#contact">CONTACT</a></li>
         </ul>
       </nav>
-      <!-- <div class="nav_icons"><b class="icons" id="icons_id">&#9776;</b></div> -->
-    </header>
-    <div class="home_image"></div>
-    <div class="landing_content">
-      <h1 class="name">Theresa Nyatichi Monari</h1>
-      <div class="home_text">
-        <p class="title">GEOSPATIAL DATA SCIENCE</p>
-        <p class="home_desc">
-          Geographic Information Science (GIS) | Geospatial Artificial
-          Intelligence (GEOAI) | Remote Sensing | Geospatial Data Analytics |
-          LiDAR | GIS Programming | Google Earth Engine | Topographic Surveying
-          | Global Positioning System (GPS) | Cloud Computing | Web Mapping |
-          Spatial Data Management
-        </p>
+      <div class="menu" onclick="show()">
+        <b class="menu_icon" id="menu_id">&#9776;</b>
       </div>
-      <a href="research.html" class="button">More About Me</a>
+    </header>
+    <!-- Part 2: Home Landing Page -->
+    <div class="home_image">
+      <div class="home_content">
+        <h1 class="name">Theresa Nyatichi Monari</h1>
+        <h1 class="title">GEOSPATIAL DATA SCIENCE</h1>
+        <p class="home_desc">
+          Geographic Information Science (GIS) | Remote Sensing | Geospatial
+          Artificial Intelligence (GEOAI) | Geospatial Data Analytics | LiDAR |
+          GIS Programming | Google Earth Engine | Topographic Surveying | Global
+          Positioning System (GPS) | Cloud Computing | Web Mapping | Spatial
+          Data Management
+        </p>
+        <button>
+          <a class="home_button" href="research.html">More About Me</a>
+        </button>
+      </div>
     </div>
 
     <!-- Part 2: About Me -->
     <div class="about_page">
-      <div class="about_intro">
+      <div class="about_intro" id="about">
         <h1>ABOUT ME</h1>
         <br />
         <p>
