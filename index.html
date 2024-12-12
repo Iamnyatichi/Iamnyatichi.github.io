@@ -17,14 +17,14 @@
   <body>
     <!-- Part 1: Navigation Bar -->
     <header class="header">
-      <div class="logo">Ms. Theresa</div>
+      <a href="#home_page" class="logo">Ms. Theresa</a>
       <nav class="nav_bar" id="nav_bar_id">
         <ul>
           <li><a href="#about">HOME</a></li>
           <li><a href="about.html">ABOUT ME</a></li>
           <li><a href="resume.html">RESUME</a></li>
           <li><a href="research.html">RESEARCH</a></li>
-          <li><a href="#contact">CONTACT</a></li>
+          <li><a href="#contact" class="contact">CONTACT</a></li>
         </ul>
       </nav>
       <div class="menu" onclick="show()">
@@ -32,7 +32,7 @@
       </div>
     </header>
     <!-- Part 2: Home Landing Page -->
-    <div class="home_image">
+    <div class="home_image" id="home_page">
       <div class="home_content">
         <h1 class="name">Theresa Nyatichi Monari</h1>
         <h1 class="title">GEOSPATIAL DATA SCIENCE</h1>
@@ -49,71 +49,85 @@
       </div>
     </div>
 
-    <!-- Part 2: About Me -->
-    <div class="about_page">
-      <div class="about_intro" id="about">
-        <h1>ABOUT ME</h1>
-        <br />
+    <!-- Part 3: About Me -->
+    <div class="about_page" id="about">
+      <div class="about_contents">
+        <!-- profile picture section  -->
+        <section class="profile_image">
+          <img src="images/profile-image.jpg" />
+        </section>
+        <!-- content section  -->
+        <section class="about_section">
+          <h1>ABOUT ME</h1>
+          <h2>GIS & Remote Sensing Scientist</h2>
+          <p>
+            Hello! My name is Theresa Nyatichi Monari. I am a research ethusiast
+            with a concentration in Geospatial Data Science, Geographic
+            Information Science (GIS), Remote Sensing, and Geospatial Artificial
+            Intelligence (GEOAI). I enjoy all things about Geography for
+            environmental sustainability and laverage technology and geospatial
+            data to better comprehend geospatial data and our planet earth!
+          </p>
+          <button>
+            <a class="about_button" href="about.html">More About Me</a>
+          </button>
+        </section>
+      </div>
+    </div>
+    <!-- Part 4:Project Highlights -->
+    <div class="projects_page">
+      <div class="projects_contents">
+        <section class="project_section">
+          <h1>PROJECTS SPOTLIGHT</h1>
+          <h2>Kenya Flood Hazard Exposure</h2>
+          <h3>Personal Project I Carried Out For Skills Enhancement</h3>
+          <p>
+            This project examines the vulnerability of Kenya to floods.Through
+            analysis of historical floods data, this project determines the
+            flood hazard exposure in relation to population.
+          </p>
+        </section>
+      </div>
+    </div>
+    <!-- Part 5: Current Project -->
+    <div class="currentwork_page">
+      <div class="currentwork_contents">
+        <section class="currentwork_section">
+          <h1>CURRENT WORK</h1>
+          <p>
+            Check out my current projects/ research in GIS, Remote Sensing,
+            GeoAI, etc...
+          </p>
+          <button>
+            <a href="research.html" class="currentwork_button">More Research</a>
+          </button>
+        </section>
+      </div>
+    </div>
+    <!-- Part 6: Contact  -->
+    <div id="contact" class="contact_page">
+      <!-- background image above -->
+      <section class="contact_details">
+        <h2>CONTACT ME</h2>
         <p>
-          Hello! My name is Theresa Nyatichi Monari. I am a research ethusiast
-          with a concentration in Geospatial Data Science, GIS, Remote Sensing,
-          and Geospatial Artificial Intelligence (GEOAI). I enjoy all things
-          about Geography for environmental sustainability and laverage
-          technology and geospatial data to better comprehend geospatial data
-          and our planet earth!
+          Email:
+          <a href="mailto: nyatichitheresa@gmail.com" target="_blank"
+            >nyatichitheresa@gmail.com</a
+          >
+        </p>
+        <p>
+          LinkedIn:
+          <a
+            href="https://www.linkedin.com/in/theresa-monari-4a366527a/"
+            target="_blank"
+            >Theresa Nyatichi Monari</a
+          >
+        </p>
+        <p>Phone: +2547 4172 0361</p>
+        <p>
+          >Please feel free to contact me. I look forward to hearing from you!
         </p>
       </div>
-      <div class="button_01">
-        <a href="about.html" class="button_01">More About Me</a>
-      </div>
-    </div>
-    <!-- Part 3:Project Highlights -->
-    <div class="projects_popup">
-      <h1>PROJECTS SPOTLIGHT</h1>
-      <h2 class="popup_head">Kenya Flood Hazard Exposure</h2>
-      <h3 class="popup_head_subtitle">
-        <i>Personal Project I Carried Out For Skills Enhancement</i>
-      </h3>
-      <br />
-      <p class="highlight_text">
-        This project examines the vulnerability of Kenya to floods.Through
-        analysis of historical floods data, this project determines the flood
-        hazard exposure in relation to population
-      </p>
-    </div>
-    <!-- Part 4: Current Project -->
-    <div class="current_work">
-      <h1>THERESA'S CURRENT WORK</h1>
-      <p>
-        Check out my current projects/research in GIS, Remote Sensing, GeoAI,
-        etc...
-      </p>
-      <a href="research.html" class="button_01">More Projects/Research</a>
-    </div>
-    <!-- Part 5: Contact  -->
-    <div id="contact">
-      <h2>CONTACT ME</h2>
-      <p>
-        Email:
-        <a href="mailto: nyatichitheresa@gmail.com" target="_blank"
-          >nyatichitheresa@gmail.com</a
-        >
-      </p>
-      <p>
-        LinkedIn:
-        <a
-          href="https://www.linkedin.com/in/theresa-monari-4a366527a/"
-          target="_blank"
-          >Theresa Nyatichi Monari</a
-        >
-      </p>
-      <p>Phone: +2547 4172 0361</p>
-      <p>
-        <i
-          >Please feel free to contact me. I look forward to hearing from
-          you!</i
-        >
-      </p>
     </div>
     <!-- Part 6: Footer  -->
     <div class="footer">
