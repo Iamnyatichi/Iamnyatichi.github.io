@@ -1,4 +1,5 @@
-/* Universal styles */
+/* index html......... 
+Universal styles */
 * {
   margin: 0px;
   padding: 0px;
@@ -20,9 +21,10 @@
   --button1: rgb(148, 8, 136);
   --hoverfade: #5b8686;
   --projectspage: rgba(117, 151, 164, 0.23);
+  --contactbackground: #5b8686c6;
+  --footerbackground: rgba(4, 90, 84, 0.781);
 }
 /* part 1: navigation bar styling */
-
 .header {
   display: flex;
   justify-content: space-evenly;
@@ -77,6 +79,7 @@
 @media screen and (max-width: 768px) {
   .header {
     padding: 0px 10px;
+    margin: 0px;
     justify-content: space-between;
     height: 60px;
     /* display: fixed; */
@@ -92,6 +95,7 @@
     position: absolute;
     background: var(--navibar);
     width: 100%;
+    margin: 0px;
     height: 0vh;
     top: 60px;
     left: 0;
@@ -113,6 +117,9 @@
   }
 }
 @media screen and (max-width: 375px) {
+  .header {
+    margin: 0;
+  }
   .header .nav_bar ul li a {
     font-size: 20px;
     line-height: 40px;
@@ -218,6 +225,10 @@
   }
 }
 @media screen and (max-width: 375px) {
+  .header {
+    /* height: 100%; */
+    width: 100%;
+  }
   .home_image .home_content .name {
     font-size: 25px;
   }
@@ -245,7 +256,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--lightgeneral);
+  background-color: var(--projectspage);
   padding: 50px 8%;
   position: relative;
   z-index: 0;
@@ -279,6 +290,30 @@
   left: 15px;
   z-index: 1;
 }
+.profile_image .social_links {
+  padding-top: 20px;
+  margin: 10px;
+  text-align: center;
+}
+.profile_image .social_links a {
+  text-decoration: none;
+  padding: 10px;
+  background-color: var(--navibar);
+  margin: 10px;
+  border-radius: 50%;
+}
+.profile_image .social_links a:hover {
+  background-color: var(--currentback);
+  transition: 0.5s;
+}
+.profile_image .social_links a i {
+  font-size: 25px;
+  color: white;
+}
+.profile_image .social_links a i:hover {
+  color: var(--hovercolor);
+  transition: 0.5s;
+}
 .about_section h1 {
   color: var(--button1);
   font-size: 50px;
@@ -296,6 +331,7 @@
   left: 0;
   background-color: var(--navibar);
 }
+
 .about_section h1::after {
   content: "";
   position: absolute;
@@ -318,12 +354,11 @@
   line-height: 1.2;
   padding-bottom: 10px;
 }
-
 .about_section button {
   border: none;
-  /* cursor: pointer; */
+  cursor: pointer;
   margin-top: 10px;
-  /* margin-top: 5px; */
+  margin-top: 5px;
 }
 .about_section button .about_button {
   font-size: 20px;
@@ -354,6 +389,7 @@
   }
   .about_section h1 {
     font-size: 30px;
+    padding: 0px;
   }
   .about_section h2 {
     font-size: 20px;
@@ -376,14 +412,26 @@
   }
   .about_section h1 {
     margin-top: 15px;
+    margin-right: 30px;
   }
   .profile_image img {
     object-fit: contain;
   }
+  .profile_image .social_links a {
+    margin: 0px;
+    padding: 10px;
+    font-size: 10px;
+  }
+  .profile_image .social_links a i {
+    font-size: 20px;
+  }
 }
 @media screen and (max-width: 375px) {
   .about_page {
-    padding: 0px;
+    padding: 5px;
+  }
+  .profile_image {
+    margin: 0px;
   }
   .profile_image img {
     width: 100%;
@@ -395,12 +443,14 @@
     position: relative;
     min-width: 100px;
     height: 150px;
+    padding: 0px;
   }
   .about_contents .profile_image::after {
     outline: none;
   }
   .about_section h1 {
     font-size: 20px;
+    padding-top: 20px;
   }
   .about_section h2 {
     font-size: 16px;
@@ -414,7 +464,19 @@
   }
   .about_section button .about_button {
     padding: 5px 5px;
-    font-size: 14px;
+    font-size: 10px;
+  }
+  .profile_image .social_links {
+    padding: 0px;
+    margin: 0px;
+  }
+  .profile_image .social_links a {
+    margin: 0px;
+    padding: 8px;
+  }
+  .profile_page .social_links a i {
+    margin: 0px;
+    padding: 5px;
   }
 }
 
@@ -426,7 +488,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--projectspage);
+  background-color: var(--lightgeneral);
   padding: 8% 8%;
   position: relative;
   z-index: 0;
@@ -470,8 +532,8 @@
   font-weight: 100px;
 }
 @media screen and (max-width: 375px) {
-  .projects_page {
-    padding: 0px 10px;
+  .projects_page .project_section {
+    padding: 0px 5px;
   }
   .project_section h1 {
     font-size: 20px;
@@ -495,7 +557,7 @@
   /* display: flex; */
   justify-content: center;
   align-items: center;
-  background-color: var(--lightgeneral);
+  background-color: var(--projectspage);
   padding: 8% 8%;
   position: relative;
   z-index: 0;
@@ -552,8 +614,8 @@
   transition: 0.3s;
 }
 @media screen and (max-width: 375px) {
-  .currentwork_page {
-    padding: 0px 10px;
+  .currentwork_page /.currentwork_section {
+    padding: 5px;
     margin: 0;
   }
   .currentwork_section h1 {
@@ -568,295 +630,136 @@
 }
 /* Part 6: Contact page styling */
 .contact_page {
-  display: flex;
-  justify-content: center;
   align-items: center;
-  height: 60vh;
-  color: var(--navibar);
-  flex-direction: column;
-  padding: 0 60px;
-  /* line-height: 60px; */
-  /* margin-bottom: 20px; */
+  width: 100%;
+  height: 100%;
+  display: flex;
   text-align: center;
-  background: rgba(20, 1, 17, 0.907);
+  justify-content: center;
+  background: var(--contactbackground);
 }
 .contact_page .contact_contents {
   border: 2px var(--navibar);
-  background: white;
-  /* opacity: 1; */
-}
-
-/* 
-.home_image {
-  background-image: url("images/home-page-image.jpg");
-  background-size: cover;
-  box-sizing: border-box;
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  background-color: rgba(0, 0, 0, 0.55);
+  color: var(--navibar);
+  padding-top: 20px;
   opacity: 1;
 }
-.home_page ::after {
+.contact_page .contact_contents h1 {
+  color: var(--button1);
+  font-size: 50px;
+  font-weight: bolder;
+  margin-bottom: 15px;
+  position: relative;
+}
+.contact_page .contact_contents h1::before {
   content: "";
   position: absolute;
   width: 100%;
   height: 100%;
-  top: 0;
+  height: 1.5px;
+  top: 110%;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.55);
-}
-
-.landing_content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-.name {
-  font-size: 3rem;
-  margin-bottom: 20px;
-  font-weight: bold;
-  display: block;
-}
-.title {
-  font-size: 3.8rem;
-  font-weight: bolder;
-  display: block;
-  white-space: nowrap;
-  left: 50%;
-  margin-bottom: 30px;
-  word-spacing: 2px;
-  text-shadow: 1.5px 1.5px black;
-  transition: 0s;
-  overflow: auto; *
-}
-@media screen and (max-width: 768px) {
-  .title {
-    white-space: wrap;
-    display: inline-block;
-    transition: 0s;
-    padding: 0;
-    text-shadow: none;
-    font-size: 40px;
-    overflow: hidden;
-    box-sizing: border-box;
-  }
-  /*
-  .name {
-    /* white-space: wrap; 
-    font-size: 30px;
-    padding: 0;
-  }
-  .home_desc {
-    font-size: 16px;
-  }
-}
-@media screen and (max-width: 450px) {
-  .title {
-    margin: 0px;
-  }
-  .name {
-    margin: 0px;
-    word-wrap: normal;
-    /* white-space: wrap; *
-  }
-}
-.home_desc {
-  font-size: 20px;
-  display: block;
-  font-weight: 500;
-  /* white-space: wrap; 
-  margin-bottom: 30px;
-  display: block;
-  unicode-bidi: isolate;
-  /* margin-inline-start: 1em; *
-}
-.button {
-  padding: 12px 22px;
-  font-size: 20px;
-  text-decoration: none;
-  font-weight: 500;
-  border: none;
-  outline: none;
-  color: var(--lightgeneral);
-  background-color: var(--button1);
-  border-radius: 10px;
-  cursor: pointer;
-  transition: 0.5ms;
-}
-.button:hover {
-  color: var(--hovercolor);
-  text-decoration: underline;
-  background: var(--currentback)
-}
-/* 
-@media (max-width: 768px){
-  .home_page{
-    min-height: 30vh;
-  }
-  .name{
-    font-size: calc(1.525rem +  3.3vw);
-  }
-}
-/* general styling 
-:root {
-  --navibar: #1b1b1b;
-  --lightgeneral: #ffffff;
-  --hovercolor: #00ffff;
-  --currentback: #27365d;
-}
-* {
-  margin: 0px;
-  padding: 0px;
-  font-family: "Roboto Slab", serif, Arial, Helvetica, sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  box-sizing: border-box;
-}
-
- testing  
-@media (max-width: 450px) {
-  h1{
-    font-size: 44px;
-  }
-}
-
-@media (max-width: 300px) {
-  h1{
-    font-size: 34px;
-  }
-}
-
-Navigation Bar Styles 
-nav {
-  align-items: center;
-  position: fixed;
-}
-.nav_bar{
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  z-index: 1000;
-}
-.nav_bar ul {
-  list-style-type: none;
   background-color: var(--navibar);
-  opacity: 90%;
-  padding: 0px;
-  margin: 0px;
-  top: 0px;
+}
+
+.contact_page .contact_contents p {
+  font-size: 25px;
+  line-height: 1.2;
+  padding: 5px;
+  font-weight: 300px;
   text-align: center;
-  justify-content: center;
-  
-  border-bottom: 2px solid var(--navibar);
+  font-style: italic;
 }
-.nav_bar li {
-  display: inline-block;
+.contact_page .contact_contents p a {
+  color: var(--button1);
+  font-weight: 400px;
+  font-size: 25px;
 }
-
-.nav_bar a {
-  position: relative;
-  color: var(--lightgeneral);
-  text-decoration: none;
-  padding: 25px ;
-  width: 100%;
-  display: block;
-  text-align: center;
-  justify-content: center;
-  font-size: 20px;
-  font-weight: bold;
+.contact_page .contact_contents .close {
+  margin-top: 25px;
 }
 
-
-link hover color change
-.nav_bar a:hover {
-  color: var(--hovercolor);
-  text-decoration: underline;
+@media screen and (max-width: 375px) {
+  .contact_page .contact_contents {
+    padding: 5px;
+    /* display: flex; */
+    z-index: 0;
+  }
+  .contact_page .contact_contents h1 {
+    font-size: 25px;
+  }
+  .contact_page .contact_contents p {
+    font-size: 16px;
+    /* padding: 0px; */
+  }
+  .contact_page .contact_contents p a {
+    font-weight: 300px;
+    font-size: 8.8px;
+  }
+  .contact_page .contact_contents .close {
+    margin-top: 0px;
+  }
 }
-.nav_bar a.current {
-  background: var(--currentback);
-  background-clip: inherit;
-}
 
-.header {
-  text-align: center;
+/* Part 7: Footer stles  */
+.footer_page {
+  background: var(--footerbackground);
   align-items: center;
-  background-image: url("images/home-page-image.jpg");
-  background-size:cover;
-  background-position: center center;
-
-  background-attachment: scroll;
-  
-  justify-content:center;
- 
-  height: 100vh;
-  min-height: 300px;
-  width:100%;
-  background-repeat: no-repeat;
- 
-  display: flex;
-  
-  opacity: 20%;
-}
-@media(max-width:300px) {
-  .header{
-    background-image:  url("images/home-page-image.jpg");
-    background-size: contain; avoid image cropping
-    height: 100%;   
-    width:100%;
-    overflow-x: hidden;
-    background-position: center;
-    object-fit:fill;
-
-  }
-}media
-
-
-part 1: home landing page styling
-.landing_page {
-  box-sizing: border-box;
   width: 100%;
-  margin: 0 auto;
-  min-height: 100%;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  
+  height: 100%;
+  text-align: center;
+  justify-content: center;
+  padding: 15px;
 }
-Media Query for small screens
-@media (max-width: 768px) {
-  .landing_page {
-     width: 95%; 
-    Make content take up more width on smaller screens
-    height: 100vh; 
-    padding: 10px; 
-    font-size: 14px;
-    margin: 5px;
+.footer_page h2 {
+  font-size: 25px;
+  font-weight: bolder;
+  padding-bottom: 5px;
+}
+.footer_page .social_links {
+  padding: 10px;
+}
+.footer_page .social_links a {
+  text-decoration: none;
+  padding: 10px;
+  background-color: white;
+  margin: 10px;
+  border-radius: 50%;
+}
+.footer_page .social_links a:hover {
+  background-color: var(--navibar);
+  transition: 0.5s;
+}
+.footer_page .social_links a i {
+  font-size: 25px;
+  color: var(--navibar);
+}
+.footer_page .social_links a i:hover {
+  color: white;
+  transition: 0.5s;
+}
+.footer_bottom {
+  color: white;
+  background: var(--navibar);
+  padding: 15px;
+  text-align: center;
+}
+
+@media screen and (max-width: 375px) {
+  .footer_page {
+    padding: 5px;
+    z-index: 0;
+  }
+  .footer_page h2 {
+    font-size: 20px;
+  }
+  .footer_page .social_links {
+    padding: 5px;
+  }
+  .footer_page .social_links a {
+    margin: 0px;
+    padding: 5px;
   }
 }
-.name{
-  margin-top: 100px;
-  margin-bottom: 20px;
-  font-size: 60px;
-  font-weight: bolder;
-}
-.title{
-  font-size: 75px;
-  font-weight: bolder;
-  margin-bottom: 50px;
-}
-.home_desc{
-  font-size: 18px;
-  margin: 0 100px 15px 100px; 
-  font-weight: 800;
-  text-align: center;
-  line-height: 1.75;
-  display: inline-grid;
-  /* color: rgba(25, 25, 26, 0.708); 
-}
- */
+
+/* Document 2: About html */
