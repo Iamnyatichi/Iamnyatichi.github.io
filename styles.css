@@ -132,33 +132,27 @@ Universal styles */
 
 /* part 2: home landing page styles */
 .home_image {
-  /* position: relative; */
-  width: 100%;
-  height: 100vh;
+  z-index: 0;
+  margin-top: 60px;
   background-image: url("images/home-page-image.png");
   background-position: center bottom;
   background-size: cover;
   background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
 }
 .home_image::after {
   content: "";
   /* position: absolute; */
-  width: 100%;
-  height: 100vh;
   top: 0;
   left: 0;
-  /* background-color: rgba(0,0,0,0.45); */
 }
 .home_image .home_content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  flex-direction: column;
-  padding: 0 60px;
-  /* line-height: 60px; */
-  /* margin-bottom: 20px; */
+  line-height: 1.2;
+  padding: 0 50px;
+  font-weight: 100px;
   text-align: center;
+  padding-top: 250px;
 }
 .home_image .home_content .name {
   font-size: 50px;
@@ -168,18 +162,14 @@ Universal styles */
 .home_image .home_content .title {
   font-size: 75px;
   font-weight: bolder;
-  /* padding-bottom: 20px; */
+  padding-bottom: 20px;
   padding-top: 20px;
   text-shadow: 2px 2px var(--navibar);
 }
-.home_image .home_content .home_desc {
-  font-size: 25px;
-  font-weight: 500;
-  padding: 20px 50px;
-}
+
 .home_image .home_content button {
   border: none;
-  /* outline: none; */
+  outline: none;
   margin-top: 30px;
 }
 .home_image .home_content .home_button {
@@ -201,10 +191,11 @@ Universal styles */
   transition: 0.3s;
 }
 @media screen and (max-width: 768px) {
+  .home_image {
+    height: 100%;
+  }
   .home_image .home_content {
-    /* margin-bottom: 10px; */
-    padding: 0px;
-    /* overflow: hidden; */
+    padding: 50px;
   }
   .home_image .home_content .name {
     font-size: 38px;
@@ -221,7 +212,11 @@ Universal styles */
     margin: 15px 15px;
   }
   .home_image .home_content button {
-    margin-top: 5px;
+    margin: 10px;
+  }
+  .home_image .home_content .home_button {
+    font-size: 20px;
+    padding: 5px;
   }
 }
 @media screen and (max-width: 375px) {
@@ -229,23 +224,34 @@ Universal styles */
     /* height: 100%; */
     width: 100%;
   }
+  .home_image {
+    height: 100%;
+  }
+  .home_image .home_content {
+    padding-top: 20px;
+    padding-left: 5px;
+  }
+
   .home_image .home_content .name {
     font-size: 25px;
+    padding-bottom: 5px;
   }
   .home_image .home_content .title {
     font-size: 20px;
+    padding-top: 5px;
   }
+
   .home_image .home_content .home_desc {
     font-size: 14px;
     padding: 0px;
-    margin: 10px;
+    /* margin: 10px; */
   }
   .home_image .home_content button {
-    margin-top: 10px;
+    margin: 10px;
   }
   .home_image .home_content .home_button {
-    font-size: 12px;
-    padding: 10px;
+    font-size: 15px;
+    padding: 5px;
   }
 }
 /* Part 3: about me  */
@@ -277,18 +283,18 @@ Universal styles */
   height: 100%;
   object-fit: cover;
   position: relative;
-  z-index: 2;
+  z-index: 0;
   /* image-orientation: 3000dpi; */
 }
 .about_contents .profile_image::after {
-  position: absolute;
+  position: relative; /*absolute*/
   content: "";
   width: 100%;
   height: 100%;
   outline: 3px solid var(--button1);
   top: 15px;
   left: 15px;
-  z-index: 1;
+  z-index: 0;
 }
 .profile_image .social_links {
   padding-top: 20px;
@@ -643,6 +649,7 @@ Universal styles */
   color: var(--navibar);
   padding-top: 20px;
   opacity: 1;
+  margin: 20px;
 }
 .contact_page .contact_contents h1 {
   color: var(--button1);
@@ -676,7 +683,7 @@ Universal styles */
   font-size: 25px;
 }
 .contact_page .contact_contents .close {
-  margin-top: 25px;
+  margin: 25px;
 }
 
 @media screen and (max-width: 375px) {
@@ -733,6 +740,7 @@ Universal styles */
 .footer_page .social_links a i {
   font-size: 25px;
   color: var(--navibar);
+  /* text-align: center; */
 }
 .footer_page .social_links a i:hover {
   color: white;
