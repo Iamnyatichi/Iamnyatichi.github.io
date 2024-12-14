@@ -138,7 +138,8 @@ Universal styles */
   background-position: center bottom;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100vh;
+  min-height: 100vh;
+  height: 100%;
   width: 100%;
 }
 .home_image::after {
