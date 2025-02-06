@@ -486,10 +486,28 @@ Universal styles */
 }
 
 @media screen and (max-width: 630px) {
+  .about_page {
+    /* margin-top: 0px; */
+    padding: 15px;
+    position: relative;
+    /* padding: 0px; */
+  }
+
   .about_page .about_contents {
+    padding: 0px;
+    margin: 0px;
     display: inline-block;
-    padding-top: 20px;
-    /* padding: 55px 5px; */
+  }
+
+  .about_page .about_section {
+    padding: 5px;
+    margin: 0px;
+    margin-top: 30px;
+  }
+
+  .about_section p {
+    margin: 5px;
+    padding: 5px;
   }
 
   .profile_image {
@@ -549,6 +567,12 @@ Universal styles */
     padding: 5px;
   }
 
+  .about_page .about_section {
+    padding: 5px;
+    margin: 0px;
+    margin-top: 20px;
+  }
+
   .profile_image {
     margin: 0px;
   }
@@ -582,10 +606,12 @@ Universal styles */
 
   .about_section p {
     font-size: 14px;
+
   }
 
   .about_section p a {
     font-size: 14px;
+
   }
 
   .about_section button {
@@ -599,20 +625,20 @@ Universal styles */
   }
 
   .profile_image .social_links {
-    padding: 10px;
+    padding: 5px;
     margin: 0px;
   }
 
   .profile_image .social_links a {
-    margin: 1px;
-    padding: 8px;
-    font-size: 20px;
+    margin: 0px;
+    padding: 5px;
+    font-size: 25px;
   }
 
   .profile_page .social_links a i {
     margin: 0px;
-    padding: 5px;
-    font-size: 15px;
+    padding: 2px;
+    /* font-size: 10px; */
   }
 }
 
@@ -1038,6 +1064,7 @@ Universal styles */
 }
 
 @media screen and (max-width: 630px) {
+
   .home_landing {
     /* margin-top: 0px; */
     padding: 15px;
