@@ -8,7 +8,7 @@ Universal styles */
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  font-size: 16px;  
+  font-size: 16px;
   scroll-behavior: smooth;
 }
 
@@ -258,6 +258,38 @@ Universal styles */
   }
 }
 
+@media screen and (max-width: 410px) {
+  .home_image .home_content {
+    padding: 30px;
+  }
+
+  .home_image .home_content .name {
+    font-size: 30px;
+    padding-bottom: 35px;
+  }
+
+  .home_image .home_content .title {
+    font-size: 35px;
+    text-shadow: 1px 1px var(--navibar);
+    /* padding: 0px; */
+  }
+
+  .home_image .home_content .home_desc {
+    font-size: 20px;
+    padding-top: 20px;
+    margin: 10px 10px;
+  }
+
+  .home_image .home_content button {
+    margin: 20px;
+  }
+
+  .home_image .home_content .home_button {
+    font-size: 20px;
+    padding: 8px;
+  }
+}
+
 @media screen and (max-width: 375px) {
   .header {
     /* height: 100%; */
@@ -454,13 +486,21 @@ Universal styles */
 @media screen and (max-width: 768px) {
   .about_page {
     min-height: 10vh;
+    display: inline-block;
   }
 
   .about_page .about_contents {
-    display: grid;
-    grid-template-columns: 2fr 3fr;
+    /* display: inline-block; */
+    /* grid-template-columns: 2fr 3fr; */
     gap: 40px;
     /* position: relative; */
+  }
+
+  .profile_image img {
+
+    object-fit: contain;
+    /* position: relative; */
+    /* z-index: 0; */
   }
 
   .about_section h1 {
@@ -469,14 +509,14 @@ Universal styles */
   }
 
   .about_section h2 {
-    font-size: 20px;
+    font-size: 25px;
     /* padding: 14px 0px 15px; */
     letter-spacing: normal;
     padding-bottom: 10px;
   }
 
   .about_section p {
-    font-size: 18px;
+    font-size: 20px;
   }
 
   .about_section button .about_button {
@@ -561,6 +601,37 @@ Universal styles */
   }
 }
 
+@media screen and (max-width: 410px) {
+  .about_section button {
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+
+  .about_section button .about_button {
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  .about_section h1 {
+    font-size: 25px;
+    padding-top: 20px;
+  }
+
+  .about_section h2 {
+    font-size: 20px;
+  }
+
+  .about_section p {
+    font-size: 15px;
+    padding: 0px;
+
+  }
+
+  .about_section button .about_button {
+    padding: 8px;
+    font-size: 15px;
+  }
+}
 
 @media screen and (max-width: 375px) {
   .about_page {
@@ -699,6 +770,29 @@ Universal styles */
   font-weight: 100px;
 }
 
+@media screen and (max-width:410px) {
+  .projects_page {
+    padding: 20px;
+  }
+
+  .project_section h1 {
+    font-size: 25px;
+  }
+
+  .project_section h2 {
+    font-size: 20px;
+    /* letter-spacing: 1px; */
+  }
+
+  .project_section h3 {
+    font-size: 17px;
+  }
+
+  .project_section p {
+    font-size: 15px;
+  }
+}
+
 @media screen and (max-width: 375px) {
   .projects_page .project_section {
     padding: 0px 5px;
@@ -793,6 +887,21 @@ Universal styles */
   transition: 0.3s;
 }
 
+@media screen and (max-width:410px) {
+  .currentwork_section h1 {
+    font-size: 25px;
+  }
+
+  .currentwork_section p {
+    font-size: 15px;
+  }
+
+  .currentwork_section button .currentwork_button {
+    font-size: 15px;
+    padding: 8px;
+  }
+}
+
 @media screen and (max-width: 375px) {
   .currentwork_page /.currentwork_section {
     padding: 5px;
@@ -880,17 +989,17 @@ Universal styles */
   }
 
   .contact_page .contact_contents h1 {
-    font-size: 40px;
+    font-size: 25px;
   }
 
   .contact_page .contact_contents p {
-    font-size: 25px;
+    font-size: 20px;
     /* padding: 0px; */
   }
 
   .contact_page .contact_contents p a {
     font-weight: 300px;
-    font-size: 25px;
+    font-size: 20px;
   }
 
   .contact_page .contact_contents .close {
@@ -963,7 +1072,13 @@ Universal styles */
   background: var(--navibar);
   padding: 15px;
   text-align: center;
+  font-size: 150px;
 }
+
+.footer_bottom p {
+  font-size: 15px;
+}
+
 
 @media screen and (max-width: 375px) {
   .footer_page {
@@ -1094,7 +1209,7 @@ Universal styles */
   }
 }
 
-@media screen and (max-width: 405px) {
+@media screen and (max-width: 410px) {
   .home_landing {
     /* margin-top: 0px; */
     padding: 5px;
@@ -1102,24 +1217,25 @@ Universal styles */
   }
 
   .home_landing .about_section {
-    padding: 0px;
+    padding: 10px;
     margin: 0px;
   }
 
   .home_landing h1 {
-    font-size: 32px;
+    font-size: 25px;
     padding-top: 20px;
   }
 
   .home_landing .about_section p {
-    font-size: 14px;
-    padding: 5px;
-    margin: 3px;
+    font-size: 15px;
+    padding: 0px;
+    margin: 13px;
   }
 
   .home_landing .about_section p a {
-    font-size: 10px;
+    font-size: 15px;
   }
+
 
   .home_landing .about_section .social_links a {
     padding: 10px;
@@ -1139,8 +1255,19 @@ Universal styles */
 }
 
 @media screen and (max-width: 375px) {
+  .home_landing {
+    /* margin-top: 0px; */
+    padding: 5px;
+    /* position: relative; */
+  }
+
+  .home_landing .about_section {
+    padding: 0px;
+    margin: 0px;
+  }
+
   .home_landing .about_section p a {
-    font-size: 8px;
+    font-size: 7px;
   }
 
   .home_landing .about_section .social_links a {
@@ -1215,6 +1342,82 @@ Universal styles */
   line-height: 1.5;
 }
 
+button {
+  border: none;
+  outline: none;
+  margin-top: 30px;
+}
+
+.research_interest .resume {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--button1);
+  background: var(--navibar);
+  cursor: pointer;
+  transition: 0.5s;
+  text-decoration: none;
+  outline: none;
+  padding: 12px;
+  border-radius: 10px;
+}
+
+.research_interest .resume:hover {
+  color: var(--hovercolor);
+  background: var(--currentback);
+  text-decoration: underline;
+  transition: 0.3s;
+}
+
+
+@media screen and (max-width:410px) {
+
+  .research_interest {
+    padding: 25px;
+  }
+
+  .research_interest h1 {
+    font-size: 25px;
+    padding-bottom: 10px;
+  }
+
+  .research_interest h2 {
+    font-size: 20px;
+  }
+
+  .research_interest p {
+    font-size: 15px;
+  }
+
+  .skills {
+    padding: 20px;
+  }
+
+  .skills ol {
+    padding-left: 20px;
+  }
+
+  .skills ol li {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .skills ol li span {
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 1.5;
+  }
+
+  button {
+    margin-top: 15px;
+  }
+
+  .research_interest .resume {
+    font-size: 15px;
+    padding: 8px;
+
+  }
+}
+
 @media screen and (max-width: 375px) {
   .research_interest {
     padding: 10px;
@@ -1249,6 +1452,16 @@ Universal styles */
     font-size: 14px;
     font-weight: bold;
     line-height: 1.5;
+  }
+
+  button {
+    margin-top: 5px;
+  }
+
+  .research_interest .resume {
+    font-size: 10px;
+    padding: 7px;
+
   }
 }
 
@@ -1446,6 +1659,30 @@ ul li p {
   }
 }
 
+@media screen and (max-width:410px) {
+  .my_resume h1 {
+    font-size: 25px;
+    padding-bottom: 10px;
+  }
+
+  .my_resume .heading {
+    font-size: 20px;
+    margin-bottom: 25px;
+  }
+
+  .resume_timeline ul li .date {
+    font-size: 20px;
+  }
+
+  .resume_timeline ul li .title {
+    font-size: 20px;
+  }
+
+  ul li p {
+    font-size: 15px;
+  }
+}
+
 @media screen and (max-width: 375px) {
   .my_resume h1 {
     font-size: 40px;
@@ -1538,6 +1775,24 @@ ul li p {
   font-style: italic;
 }
 
+@media screen and (max-width:410px) {
+  .education h2 {
+    font-size: 25px;
+    padding-bottom: 10px;
+  }
+
+  .education .education_timeline .first .dates {
+    font-size: 20px;
+    padding-bottom: 10px;
+  }
+
+  .education .education_timeline .first .program {
+    font-size: 20px;
+    padding-bottom: 10px;
+  }
+
+}
+
 @media screen and (max-width: 375px) {
   .education {
     padding: 10px 5%;
@@ -1623,6 +1878,27 @@ a:hover {
   padding-top: 20px;
 }
 
+@media screen and (max-width:410px) {
+  .certification h2 {
+    font-size: 20px;
+    padding-bottom: 0px;
+  }
+
+  .certification h3 {
+    font-size: 17px;
+  }
+
+  .certification li {
+    font-size: 15px;
+  }
+
+  .certification button {
+    font-size: 15px;
+    padding: 8px;
+  }
+
+}
+
 @media screen and (max-width: 375px) {
   .certification h2 {
     font-size: 19px;
@@ -1650,6 +1926,11 @@ a:hover {
   .certification li {
     font-size: 14px;
   }
+
+  .certification button {
+    font-size: 10px;
+    padding: 8px;
+  }
 }
 
 
@@ -1666,4 +1947,10 @@ a:hover {
   color: var(--button1);
   font-weight: bolder;
   text-align: center;
+}
+@media screen and (max-width:410px) {
+  .portfolio_page h1{
+    font-size: 25px;
+  }
+  
 }
