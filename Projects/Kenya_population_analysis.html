@@ -2,80 +2,122 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Theresa Monari | GIS Portfolio</title>
-	<link rel="stylesheet" href="../styles.css" />
-	<link rel="stylesheet" href="media-queries.css" />
-	<link rel="preconnect" href="https://fonts.googleapis.com" />
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-	<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
-		integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
-		crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Theresa Monari | GIS Portfolio</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="media-queries.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+    integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
-	<!-- Part 1: Navigation Bar -->
-	<header class="header">
-		<a href="../index.html" class="logo">Ms. Monari</a>
-		<nav class="nav_bar" id="nav_bar_id">
-			<ul>
-				<li><a href="../index.html">HOME</a></li>
-				<li><a href="../about.html">ABOUT ME</a></li>
-				<li><a href="../resume.html">RESUME</a></li>
-				<li><a href="../research.html">PORTFOLIO</a></li>
-				<li><a href="#contact" class="contact">CONTACT</a></li>
-			</ul>
-		</nav>
-		<div class="menu" onclick="show()">
-			<b class="menu_icon" id="menu_id">&#9776;</b>
-		</div>
-	</header>
-	<!-- Part 2: MY PORTFOLIO Page -->
-	<div class="portfolio_page">
-		<h1>PORTFOLIO</h1>
-	</div>
-	<!-- Project Title and Image  -->
-	<div class="image_title">
-		
-	</div>
+  <!-- Part 1: Navigation Bar -->
+  <header class="header">
+    <a href="../index.html" class="logo">Ms. Monari</a>
+    <nav class="nav_bar" id="nav_bar_id">
+      <ul>
+        <li><a href="../index.html">HOME</a></li>
+        <li><a href="../about.html">ABOUT ME</a></li>
+        <li><a href="../resume.html">RESUME</a></li>
+        <li><a href="../research.html">PORTFOLIO</a></li>
+        <li><a href="#contact" class="contact">CONTACT</a></li>
+      </ul>
+    </nav>
+    <div class="menu" onclick="show()">
+      <b class="menu_icon" id="menu_id">&#9776;</b>
+    </div>
+  </header>
+  <!-- Project Title and Image  -->
+  <div class="image_title">
+    <h1>PORTFOLIO</h1>
+    <section class="intro">
+      <div class="image">
+        <img src="../Projects/pro_images/kenya_pop_map.jpeg">
+      </div>
+      <div class="text">
+        <h2>Spatial Data Analysis</h2>
+        <p>Using Python Libraries; Pandas, Geopandas, and Matplotlib to Analyze Geospatial Data</p>
+        <a href="#" class="button">Kenya Web Map</a>
+      </div>
+    </section>
+  </div>
+  <div class="credits">
+    <section>
+      <h3>Team Members:</h3>
+      <p>Theresa Monari</p>
+    </section>
+    <section>
+      <h3>Affiliation:</h3>
+      <p>Personal Project</p>
+    </section>
+    <section>
+      <h3>Course:</h3>
+      <p>GIS Programming</p>
+    </section>
+  </div>
+  <!-- Project prief Description and access -->
+  <div class="project">
+    <h2>Project Description:</h2>
+    <p>Pandas, Geopandas, and Matplotlib are powerful Python libraries for handling vector data and visualization
+      respectively. This project dives into analyzing the population density across Kenya's 47 counties. The results are presented in tables, bar graph, choropleth map, and interactive map. Each
+      county's population density can be viewed on the interactive map upon hovering on the specific county.</p>
+    <h3 class="results">Interactive Web Map and Repository:</h3>
+    <div class="result_links">
+      <a href="#" target="_blank">
+        <p><span>View</span> Kenya Population Density Web Map</p>
+      </a>
+      <a class="links" href="https://github.com/Iamnyatichi/Kenya_population_analysis" target="_blank">
+        <p><span>View </span>GitHub
+          Repository</p>
+      </a>
+      <a class="links"
+        href="https://github.com/Iamnyatichi/Kenya_population_analysis/blob/main/Kenya_population_density_map.ipynb" target="_blank">
+        <p><span>View </span>Jupyter
+          Notebook</p>
+      </a>
+    </div>
+  </div>
 
-	<!-- Part 6: Contact  -->
-	<div id="contact" class="contact_page">
-		<div class="contact_contents">
-			<!-- background image above -->
-			<section class="contact_details">
-				<h1>CONTACT ME</h1>
-				<p class="name2">Theresa Nyatichi Monari</p>
-				<p>
-					Email:
-					<a href="mailto: nyatichitheresa@gmail.com" target="_blank">nyatichitheresa@gmail.com</a>
-				</p>
-				<p>Phone: +2547 4172 0361</p>
-				<p class="close">Please feel free to contact me. I look forward to hearing from you!
-				</p>
-		</div>
-	</div>
-	<!-- Part 7: Footer  -->
-	<footer>
-		<div class="footer_page">
-			<h2>Follow Me:</h2>
-			<div class="social_links">
-				<a href="https://github.com/Iamnyatichi" target="_blank"><i class="fa-brands fa-square-github"></i></a>
-				<a href="https://www.linkedin.com/in/theresa-monari-4a366527a/" target="_blank"><i
-						class="fa-brands fa-linkedin-in"></i></a>
-				<a href="https://x.com/IamNyatichi?t=kh9a72_OlDO6kcbpxq1U9Q&s=09" target="_blank"><i
-						class="fa-brands fa-square-x-twitter"></i></a>
-			</div>
-		</div>
-	</footer>
-	<div class="footer_bottom">
-		<p>Copyright &copy 2025; Theresa Nyatichi Monari</span></p>
-		<p>All rights reserved</p>
-	</div>
+  <!-- Part 6: Contact  -->
+  <div id="contact" class="contact_page">
+    <div class="contact_contents">
+      <!-- background image above -->
+      <section class="contact_details">
+        <h1>CONTACT ME</h1>
+        <p class="name2">Theresa Nyatichi Monari</p>
+        <p>
+          Email:
+          <a href="mailto: nyatichitheresa@gmail.com" target="_blank">nyatichitheresa@gmail.com</a>
+        </p>
+        <p>Phone: +2547 4172 0361</p>
+        <p class="close">Please feel free to contact me. I look forward to hearing from you!
+        </p>
+    </div>
+  </div>
+  <!-- Part 7: Footer  -->
+  <footer>
+    <div class="footer_page">
+      <h2>Follow Me:</h2>
+      <div class="social_links">
+        <a href="https://github.com/Iamnyatichi" target="_blank"><i class="fa-brands fa-square-github"></i></a>
+        <a href="https://www.linkedin.com/in/theresa-monari-4a366527a/" target="_blank"><i
+            class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://x.com/IamNyatichi?t=kh9a72_OlDO6kcbpxq1U9Q&s=09" target="_blank"><i
+            class="fa-brands fa-square-x-twitter"></i></a>
+      </div>
+    </div>
+  </footer>
+  <div class="footer_bottom">
+    <p>Copyright &copy 2025; Theresa Nyatichi Monari</span></p>
+    <p>All rights reserved</p>
+  </div>
 
-	<script src="../script.js"></script>
+  <script src="../script.js"></script>
 </body>
 
 </html>
