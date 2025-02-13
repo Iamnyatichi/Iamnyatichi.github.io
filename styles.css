@@ -1784,6 +1784,7 @@ a:hover {
 
   .portfolio_page h1 {
     font-size: 25px;
+    padding-bottom: 10px;
   }
 
   .portfolio_page button {
@@ -1856,7 +1857,7 @@ a:hover {
 
 @media screen and (max-width:420px) {
   .portfolio_section {
-    padding: 25px;
+    padding-left: 20px;
   }
 
   .portfolio_section .portfolio_item .portfolio_item_inner .portfolio_image a h3 {
@@ -1873,6 +1874,9 @@ a:hover {
   .portfolio_section .portfolio_item {
     object-fit: contain;
   }
+     .portfolio_section .portfolio_item .portfolio_item_inner .portfolio_image a h3 {
+       font-size: 14px;
+     }
 }
 
 
