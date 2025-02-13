@@ -335,10 +335,8 @@ Universal styles */
 .about_page {
   padding: 40px;
   width: 100%;
-  /* min-height: 60vh; */
   background-color: var(--projectspage);
   position: relative;
-  /* margin-bottom: 300px; */
 }
 
 .about_page h1 {
@@ -363,12 +361,12 @@ Universal styles */
   font-size: 25px;
   font-weight: bold;
   text-align: justify;
-  padding-bottom: 10px;
+  padding: 10px;
 }
 
 .about_page .about_section p {
   font-size: 20px;
-  padding: 5px;
+  padding: 10px;
 }
 
 .about_page .about_section .social_links {
@@ -424,18 +422,20 @@ Universal styles */
   .about_page {
     padding: 15px;
     position: relative;
-
   }
 
   .about_page .about_section {
     padding: 5px;
-    /* margin: 5px; */
   }
 
   .about_page .about_section .social_links a {
     padding: 15px;
     margin: 20px;
     font-size: 15px;
+  }
+
+  .about_page .about_section .social_links a i {
+    font-size: 20px;
   }
 }
 
@@ -457,7 +457,6 @@ Universal styles */
 
   .about_page .about_section h2 {
     font-size: 20px;
-    /* padding: 0px; */
   }
 
   .about_page .about_section button .about_button {
@@ -482,7 +481,7 @@ Universal styles */
   }
 
   .about_page .profile_image .pic_image {
-
+    margin: 20px;
     height: 340px;
   }
 }
@@ -937,12 +936,13 @@ Universal styles */
 }
 
 .home_landing .about_section {
-  padding-bottom: 0px;
+  padding-top: 0px;
 }
 
 .home_landing .about_section p {
   font-size: 20px;
-  padding: 5px;
+  padding: 10px;
+
 }
 
 .home_landing .about_section p a {
@@ -967,8 +967,6 @@ Universal styles */
   background-color: var(--navibar);
   margin: 40px;
   border-radius: 50%;
-  /* font-size: 20px; */
-  /* color: var(--button1); */
 }
 
 .home_landing .about_section .social_links a:hover {
@@ -977,9 +975,8 @@ Universal styles */
 }
 
 .home_landing .about_section .social_links a i {
-  /* font-size: 38px; */
+
   color: white;
-  padding: 1px;
   font-size: 25px;
 }
 
@@ -988,7 +985,7 @@ Universal styles */
   transition: 0.5s;
 }
 
-@media screen and (max-width: 630px) {
+@media screen and (max-width: 786px) {
 
   .home_landing {
     /* margin-top: 0px; */
@@ -998,11 +995,12 @@ Universal styles */
 
   .home_landing .about_section {
     padding: 5px;
-    margin: 5px;
   }
-.home_landing .about_section .social_links{
-  padding-bottom: 20px;
-}
+
+  .home_landing .about_section .social_links {
+    padding-bottom: 20px;
+  }
+
   .home_landing .about_section .social_links a {
     margin: 20px;
     padding: 15px;
@@ -1021,16 +1019,9 @@ Universal styles */
   }
 }
 
-@media screen and (max-width: 410px) {
+@media screen and (max-width: 420px) {
   .home_landing {
-    /* margin-top: 0px; */
-    padding: 5px;
-    position: relative;
-  }
-
-  .home_landing .about_section {
-    padding: 10px;
-    margin: 0px;
+    padding: 0px;
   }
 
   .home_landing h1 {
@@ -1038,10 +1029,13 @@ Universal styles */
     padding-top: 20px;
   }
 
+  .home_landing .about_section {
+    padding: 10px;
+    margin: 0px;
+  }
+
   .home_landing .about_section p {
     font-size: 15px;
-    padding: 0px;
-    margin: 13px;
   }
 
   .home_landing .about_section p a {
@@ -1063,6 +1057,8 @@ Universal styles */
 
   .home_landing .aboutme_content .me_image {
     width: 80%;
+    margin: 20px;
+    /*to remove excess words on the left */
   }
 }
 
@@ -1754,8 +1750,11 @@ a:hover {
 .portfolio_page {
   margin-top: 60px;
   padding: 40px;
+  padding-bottom: 20px;
   width: 100%;
+  padding-left: 20px;
   position: relative;
+  background-color: var(--projectspage);
 }
 
 .portfolio_page h1 {
@@ -1765,11 +1764,410 @@ a:hover {
   text-align: center;
 }
 
-@media screen and (max-width:410px) {
+.portfolio_page button {
+  font-size: 20px;
+  font-weight: bold;
+  justify-content: left;
+  padding: 5px;
+  margin: 2px;
+  background-color: rgba(16, 15, 15, 0.207);
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.portfolio_page button:hover {
+  background-color: var(--currentback);
+  color: var(--hovercolor);
+}
+
+@media screen and (max-width:420px) {
+
   .portfolio_page h1 {
     font-size: 25px;
   }
 
+  .portfolio_page button {
+    font-size: 15px;
+  }
 }
 
-/* Document 5: Kenya Population Analysis */
+@media screen and (max-width:375px) {
+  .portfolio_page {
+    padding: 20px;
+    padding-left: 10px;
+  }
+
+  .portfolio_page h1 {
+    font-size: 20px;
+  }
+
+  .portfolio_page button {
+    font-size: 12px;
+  }
+}
+
+/* portfolio items entries */
+.portfolio_section {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding-left: 40px;
+  padding-bottom: 40px;
+  background-color: var(--projectspage);
+}
+
+.portfolio_section .portfolio_item {
+  border: 10px solid var(--currentback);
+  margin: 5px;
+  width: 32%;
+
+  background-color: var(--currentback);
+}
+
+.portfolio_section .portfolio_item .portfolio_item_inner .portfolio_image img {
+  height: 300px;
+}
+
+.portfolio_section .portfolio_item .portfolio_item_inner .portfolio_image a {
+  text-decoration: none;
+  color: white;
+}
+
+.portfolio_section .portfolio_item .portfolio_item_inner .portfolio_image a h3 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+@media screen and (max-width:1000px) {
+
+  /* .portfolio_section{
+    display: block;
+  } */
+  .portfolio_section .portfolio_item {
+    width: 47%;
+  }
+}
+
+@media screen and (max-width:630px) {
+  .portfolio_section .portfolio_item {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width:420px) {
+  .portfolio_section {
+    padding: 25px;
+  }
+
+  .portfolio_section .portfolio_item .portfolio_item_inner .portfolio_image a h3 {
+    font-size: 17px;
+  }
+}
+
+@media screen and (max-width:375px) {
+
+  .portfolio_section {
+    padding-left: 10px;
+  }
+
+  .portfolio_section .portfolio_item {
+    object-fit: contain;
+  }
+}
+
+
+
+/* Document 5: Project 1: Kenya Population Analysis */
+.image_title {
+  margin-top: 40px;
+  padding: 60px;
+  width: 100%;
+  background-color: var(--lightgeneral);
+  position: relative;
+}
+
+.image_title h1 {
+  font-size: 60px;
+  color: var(--button1);
+  font-weight: bolder;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.image_title .intro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  height: 100%;
+}
+
+.image_title .intro .image {
+  flex: 1;
+  max-width: 50%;
+}
+
+.image_title .intro .image img {
+  width: 100%;
+  height: 50vh;
+  border-radius: 8px;
+}
+
+.image_title .intro .text {
+  flex: 1;
+  text-align: left;
+}
+
+.image_title .intro .text h2 {
+  font-size: 40px;
+  font-weight: bold;
+  padding-bottom: 20px;
+  color: var(--currentback);
+}
+
+.image_title .intro .text p {
+  font-size: 20px;
+  padding: 5px;
+  font-style: italic;
+  padding-bottom: 10px;
+}
+
+.image_title .intro .text .button {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid var(--navibar);
+  border-radius: 20px;
+  text-decoration: none;
+  color: var(--navibar);
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.3s ease;
+}
+
+.image_title .intro .text .button:hover {
+  background-color: var(--hoverfade);
+  border: none;
+  color: var(--hovercolor);
+}
+
+@media screen and (max-width:585px) {
+  .image img {
+    object-fit: contain;
+  }
+
+  .image_title .intro .text .button {
+    padding: 10px;
+    font-size: 17px;
+  }
+}
+
+@media screen and (max-width:600px) {
+  .image_title {
+    padding: 30px;
+  }
+
+  .image_title h1 {
+    font-size: 25px;
+    padding-bottom: 10px;
+  }
+
+  .image_title .intro {
+    display: block;
+    gap: 0px;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  .image_title .intro .image {
+    display: block;
+  }
+
+  .image_title .intro .image img {
+    width: 300px;
+    height: 50%;
+  }
+
+  .image_title .intro .text {
+    flex: 1;
+    text-align: left;
+  }
+
+  .image_title .intro .text h2 {
+    font-size: 20px;
+    padding: 10px;
+  }
+
+  .image_title .intro .text p {
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  .image_title .intro .text .button {
+    padding: 8px;
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width:375px) {
+  .image_title {
+    padding: 15px;
+  }
+
+  .image_title h1 {
+    font-size: 20px;
+  }
+
+  .image_title .intro .text .button {
+    font-size: 15px;
+  }
+}
+
+/* part 2 Credits. */
+.credits {
+  padding: 40px;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: var(--contactbackground);
+}
+
+.credits h3 {
+  font-size: 25px;
+  color: var(--currentback);
+  font-weight: bold;
+}
+
+.credits p {
+  font-size: 20px;
+}
+
+@media screen and (max-width:786px) {
+  .credits {
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width:430px) {
+  .credits h3 {
+    font-size: 17px;
+  }
+
+  .credits p {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width:375px) {
+  .credits {
+    display: block;
+  }
+
+  .image_title .intro .image img{
+    width: 100%;
+  }
+   .credits h3 {
+    padding-bottom: 5px;
+  }
+
+  .credits p {
+    padding-bottom: 10px;
+  }
+}
+
+/* Part 3: Proj prief Description*/
+.project {
+  padding: 40px;
+  background-color: var(--projectspage);
+}
+
+.project h2 {
+  font-size: 40px;
+  font-weight: bold;
+  color: var(--currentback);
+  padding-bottom: 10px;
+}
+
+.project p {
+  font-size: 20px;
+  padding: 5px;
+}
+
+.project h3 {
+  font-size: 25px;
+  font-weight: bold;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: var(--currentback);
+}
+
+.project a {
+  text-decoration: none;
+
+}
+
+.project a p {
+  font-size: 20px;
+
+  color: var(--navibar);
+  font-weight: bold;
+}
+
+.project a p span {
+  font-size: 20px;
+}
+
+.project .result_links a p {
+  margin-bottom: 20px;
+  cursor: pointer;
+  padding-bottom: 20px;
+  border-bottom: 2px solid var(--currentback);
+  background-color: var(--projectspage);
+}
+
+.project .result_links a p:hover {
+  background-color: var(--contactbackground)
+}
+
+@media screen and (max-width:420px) {
+  .project {
+    padding: 20px;
+  }
+
+  .project h2 {
+    font-size: 20px;
+  }
+
+  .project p {
+    font-size: 15px;
+  }
+
+  .project h3 {
+    font-size: 17px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .project a p {
+    font-size: 15px;
+
+  }
+
+  .project a p span {
+    font-size: 15px;
+  }
+
+  .project .result_links a p {
+    margin-bottom: 20px;
+    cursor: pointer;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--currentback);
+    background-color: var(--projectspage);
+  }
+}
+
+@media screen and (max-width:375px) {
+  .project {
+    padding: 15px;
+  }
+}
+
+/* Document 6: Project 2:  */
