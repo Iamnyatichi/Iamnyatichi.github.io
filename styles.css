@@ -159,6 +159,7 @@ Universal styles */
   min-height: 88vh;
   height: 100%;
   width: 100%;
+  image-rendering: auto;
 }
 
 .home_image::after {
@@ -1784,7 +1785,7 @@ a:hover {
 
   .portfolio_page h1 {
     font-size: 25px;
-    padding-bottom: 10px;
+    padding-bottom: 15px;
   }
 
   .portfolio_page button {
@@ -1874,9 +1875,10 @@ a:hover {
   .portfolio_section .portfolio_item {
     object-fit: contain;
   }
-     .portfolio_section .portfolio_item .portfolio_item_inner .portfolio_image a h3 {
-       font-size: 14px;
-     }
+
+  .portfolio_section .portfolio_item .portfolio_item_inner .portfolio_image a h3 {
+    font-size: 14px;
+  }
 }
 
 
@@ -1895,7 +1897,7 @@ a:hover {
   color: var(--button1);
   font-weight: bolder;
   text-align: center;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
 }
 
 .image_title .intro {
@@ -1972,7 +1974,7 @@ a:hover {
 
   .image_title h1 {
     font-size: 25px;
-    padding-bottom: 10px;
+    padding: 20px;
   }
 
   .image_title .intro {
@@ -2065,10 +2067,11 @@ a:hover {
     display: block;
   }
 
-  .image_title .intro .image img{
+  .image_title .intro .image img {
     width: 100%;
   }
-   .credits h3 {
+
+  .credits h3 {
     padding-bottom: 5px;
   }
 
