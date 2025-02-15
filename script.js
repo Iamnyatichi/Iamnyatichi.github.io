@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // Fix: Don't keep "Home" highlighted when another link is selected
+  //  Don't keep "Home" highlighted when another link is selected
   if (activeNav && activeNav !== "/" && activeNav !== "index.html") {
     highlightLink(activeNav);
   } else {
@@ -72,8 +72,6 @@ class SpecialHeader extends HTMLElement {
   connectedCallback() {}
 }
 
-// Portfolio page buttons call
-
 // function for nav bar
 function show() {
   if (menu_hide == true) {
@@ -93,3 +91,49 @@ function show() {
 
 // function for portifolio page buttons
 function collectAll() {}
+
+// portfolio page buttons call
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  filterSelection("all"); // Show all items by default
+
+  function filterSelection(category) {
+    let items = document.getElementsByClassName("portfolio_item");
+
+    for (let i = 0; i < items.length; i++) {
+      if (category === "all") {
+        items[i].style.display = "block";
+      } else {
+        if (items[i].classList.contains(category)) {
+          items[i].style.display = "block";
+        } else {
+          items[i].style.display = "none";
+        }
+      }
+    }
+    updateActiveButton(category);
+  }
+
+  function updateActiveButton(category) {
+    let buttons = document.getElementsByClassName("buttons");
+    for (let i = 0; i < buttons.length; i++) {
+      buttons[i].classList.remove("active-button");
+    }
+    document
+      .querySelector(`[onclick="filterSelection('${category}')"]`)
+      .classList.add("active-button");
+  }
+
+  let buttonElements = document.querySelectorAll(".buttons");
+  buttonElements.forEach((button) => {
+    button.addEventListener("click", function () {
+      let category = this.getAttribute("onclick").match(/'([^']+)'/)[1];
+      filterSelection(category);
+    });
+  });
+});
+
+// index/homepage projects pop-up
+
