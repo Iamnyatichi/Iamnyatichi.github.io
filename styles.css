@@ -72,7 +72,12 @@ Universal styles */
 
 .header .nav_bar ul li a:hover {
   color: var(--hovercolor);
-  background: var(--currentback);
+  /* background: var(--currentback); */
+}
+
+.header .nav_bar ul li a.active {
+  color: var(--hovercolor);
+  background-color: var(--currentback);
 }
 
 .header .menu_icon {
@@ -1750,19 +1755,21 @@ a:hover {
 /* Document 4 : Portifolio */
 .portfolio_page {
   margin-top: 60px;
-  padding: 40px;
-  padding-bottom: 20px;
   width: 100%;
-  padding-left: 20px;
   position: relative;
-  background-color: var(--projectspage);
+  background-color: rgba(117, 151, 164, 0.46);
 }
 
 .portfolio_page h1 {
   font-size: 60px;
+  padding-top: 40px;
   color: var(--button1);
   font-weight: bolder;
   text-align: center;
+}
+
+.portfolio_page .all_buttons {
+  padding-left: 20px;
 }
 
 .portfolio_page button {
@@ -1788,19 +1795,20 @@ a:hover {
     padding-bottom: 15px;
   }
 
+  .portfolio_page .all_buttons {
+    padding-left: 10px;
+  }
+
   .portfolio_page button {
     font-size: 15px;
   }
 }
 
 @media screen and (max-width:375px) {
-  .portfolio_page {
-    padding: 20px;
-    padding-left: 10px;
-  }
-
   .portfolio_page h1 {
     font-size: 20px;
+    padding: 20px;
+    padding-left: 10px;
   }
 
   .portfolio_page button {
@@ -1815,7 +1823,7 @@ a:hover {
   width: 100%;
   padding-left: 40px;
   padding-bottom: 40px;
-  background-color: var(--projectspage);
+  /* background-color: var(--projectspage); */
 }
 
 .portfolio_section .portfolio_item {
