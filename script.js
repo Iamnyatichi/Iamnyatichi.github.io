@@ -1,15 +1,80 @@
+//navigation links highlighting when selected
+
+document.addEventListener("DOMContentLoaded", function () {
+  var navLinks = document.querySelectorAll("#nav_bar_id a");
+
+  // Get the current page pathname (excluding query parameters & hashes)
+  var currentPage = window.location.pathname;
+  var activeNav = localStorage.getItem("activeNav");
+
+  function highlightLink(linkHref) {
+    // Remove 'active' class from all links before highlighting the new one
+    navLinks.forEach((nav) => nav.classList.remove("active"));
+
+    // Find the matching link and add 'active' class
+    var activeLink = document.querySelector(
+      `#nav_bar_id a[href="${linkHref}"]`
+    );
+    if (activeLink) {
+      activeLink.classList.add("active");
+    }
+  }
+
+  // Fix: Don't keep "Home" highlighted when another link is selected
+  if (activeNav && activeNav !== "/" && activeNav !== "index.html") {
+    highlightLink(activeNav);
+  } else {
+    // If no activeNav is stored, highlight based on the current page
+    navLinks.forEach(function (link) {
+      if (!link.hash && link.pathname === currentPage) {
+        highlightLink(link.getAttribute("href"));
+      }
+    });
+  }
+
+  navLinks.forEach(function (link) {
+    link.addEventListener("click", function (event) {
+      var linkHref = this.getAttribute("href");
+
+      // Ensure only one link is highlighted
+      highlightLink(linkHref);
+
+      // Store the clicked link in localStorage (even if clicked from a different section)
+      localStorage.setItem("activeNav", linkHref);
+
+      // Handle hash links (e.g., #contact, #about) properly
+      if (this.hash) {
+        event.preventDefault(); // Prevent full page reload
+        window.location.hash = this.hash; // Ensure smooth scrolling works
+
+        // Scroll to the section smoothly
+        var section = document.querySelector(this.hash);
+        if (section) {
+          section.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+    });
+  });
+
+  // Ensure correct link is active when the page loads with a hash (e.g., #contact, #about)
+  if (window.location.hash) {
+    highlightLink(window.location.hash);
+  }
+});
+
 // hiding the navigation bar on small screens
 var menu_hide = true;
 var menu_icons = document.getElementById("nav_bar_id");
 var btn = document.getElementById("menu_id");
 
 // custom header and footer
-class SpecialHeader extends HTMLElement{
-  connectedCallback(){
-    
-  }
+class SpecialHeader extends HTMLElement {
+  connectedCallback() {}
 }
 
+// Portfolio page buttons call
+
+// function for nav bar
 function show() {
   if (menu_hide == true) {
     menu_icons.classList.add("add_cls");
@@ -25,3 +90,6 @@ function show() {
     menu_hide = true;
   }
 }
+
+// function for portifolio page buttons
+function collectAll() {}
