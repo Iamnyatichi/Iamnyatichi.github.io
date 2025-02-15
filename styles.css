@@ -357,6 +357,9 @@ Universal styles */
   float: left;
   margin: 10px;
   padding: 10px;
+  border-right: 5px solid var(--currentback);
+  padding-right: 40px;
+  margin-right: 40px;
 }
 
 .about_page .about_section {
@@ -442,6 +445,14 @@ Universal styles */
 
   .about_page .about_section .social_links a i {
     font-size: 20px;
+  }
+}
+
+@media screen and (max-width:560px) {
+  .about_page .profile_image .pic_image {
+    border-right: none;
+    padding-right: 10px;
+    margin-right: 0px;
   }
 }
 
@@ -939,15 +950,23 @@ Universal styles */
   float: left;
   margin: 10px;
   padding: 10px;
+  border-right: 5px solid var(--currentback);
+  padding-right: 40px;
+  margin-right: 40px;
+
 }
 
-.home_landing .about_section {
+.home_landing.about_section {
   padding-top: 0px;
+
+
 }
 
 .home_landing .about_section p {
   font-size: 20px;
   padding: 10px;
+  /* padding-right: 100px; */
+
 
 }
 
@@ -1022,6 +1041,9 @@ Universal styles */
     height: 100%;
     object-fit: contain;
     position: relative;
+    padding-right: 0px;
+    border: none;
+    margin-right: 20px;
   }
 }
 
@@ -1033,6 +1055,10 @@ Universal styles */
   .home_landing h1 {
     font-size: 25px;
     padding-top: 20px;
+  }
+
+  .home_landing .aboutme_content .me_image {
+    margin-right: 0px;
   }
 
   .home_landing .about_section {
@@ -1781,9 +1807,15 @@ a:hover {
   background-color: rgba(16, 15, 15, 0.207);
   cursor: pointer;
   border-radius: 4px;
+  transition: all 0.3s ease-in-out;
 }
 
 .portfolio_page button:hover {
+  background-color: rgba(16, 15, 15, 0.407);
+
+}
+
+.portfolio_page button.active-button {
   background-color: var(--currentback);
   color: var(--hovercolor);
 }
@@ -1919,6 +1951,8 @@ a:hover {
 .image_title .intro .image {
   flex: 1;
   max-width: 50%;
+  border-right: 5px solid var(--currentback);
+  padding-right: 40px;
 }
 
 .image_title .intro .image img {
@@ -1962,6 +1996,13 @@ a:hover {
   background-color: var(--hoverfade);
   border: none;
   color: var(--hovercolor);
+}
+
+@media screen and (max-width:610px) {
+  .image_title .intro .image {
+    border-right: none;
+    padding-right: 0px;
+  }
 }
 
 @media screen and (max-width:585px) {
