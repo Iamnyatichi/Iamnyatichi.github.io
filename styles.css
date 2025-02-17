@@ -78,6 +78,7 @@ Universal styles */
 .header .nav_bar ul li a.active {
   color: var(--hovercolor);
   background-color: var(--currentback);
+  padding: 5px;
 }
 
 .header .menu_icon {
@@ -209,23 +210,25 @@ Universal styles */
 }
 
 .home_image .home_content .home_button {
-  font-size: 25px;
-  font-weight: bold;
-  color: var(--button1);
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--hovercolor);
   background: var(--navibar);
   cursor: pointer;
   transition: 0.5s;
   text-decoration: none;
   outline: none;
-  padding: 12px 22px;
+  padding: 8px 18px;
   border-radius: 10px;
+  font-weight: bold;
 }
 
+
 .home_image .home_content .home_button:hover {
-  color: var(--hovercolor);
-  background: var(--currentback);
-  text-decoration: underline;
-  transition: 0.3s;
+  background-color: rgba(255, 255, 255, 0.968);
+  border: none;
+  color: var(--button1);
+
 }
 
 @media screen and (max-width: 768px) {
@@ -410,7 +413,7 @@ Universal styles */
 .about_page .about_section button .about_button {
   font-size: 20px;
   font-weight: 500;
-  color: var(--button1);
+  color: var(--hovercolor);
   background: var(--navibar);
   cursor: pointer;
   transition: 0.5s;
@@ -421,9 +424,9 @@ Universal styles */
 }
 
 .about_section button .about_button:hover {
-  color: var(--hovercolor);
-  background: var(--currentback);
-  text-decoration: underline;
+  color: var(--button1);
+  font-weight: bolder;
+  background: var(--hoverfade);
   transition: 0.3s;
 }
 
@@ -536,212 +539,366 @@ Universal styles */
 }
 
 /* Part 4: project highlights page style */
+.projects_highlight {
+  position: relative;
+  z-index: 0;
+}
+
 .projects_page {
-  width: 100%;
-  /* height: 60vh; */
-  min-height: 70vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: var(--lightgeneral);
-  padding: 8% 8%;
-  position: relative;
-  z-index: 0;
+  padding: 40px;
+
 }
 
-.project_section h1 {
-  color: var(--button1);
+.projects_page h1 {
   font-size: 50px;
+  padding-top: 40px;
+  margin-bottom: 0px;
   font-weight: bolder;
-  display: inline-block;
-  margin-bottom: 5px;
-  position: relative;
-  /* text-decoration:underline; */
-}
-
-.project_section h1::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 1.5px;
-  top: 110%;
-  left: 0;
-  background-color: var(--navibar);
-}
-
-.project_section h2 {
-  font-size: 25px;
-  font-weight: bold;
-  padding: 14px 0px 15px;
-  letter-spacing: 1px;
-  text-align: justify;
-  padding-bottom: 10px;
-}
-
-.project_section h3 {
-  font-size: 22px;
-  font-style: italic;
-  font-weight: bolder;
-  padding-bottom: 10px;
-}
-
-.project_section p {
-  font-size: 20px;
-  line-height: 1.2;
-  padding-bottom: 10px;
-  font-weight: 100px;
-}
-
-@media screen and (max-width:410px) {
-  .projects_page {
-    padding: 20px;
-  }
-
-  .project_section h1 {
-    font-size: 25px;
-  }
-
-  .project_section h2 {
-    font-size: 20px;
-    /* letter-spacing: 1px; */
-  }
-
-  .project_section h3 {
-    font-size: 17px;
-  }
-
-  .project_section p {
-    font-size: 15px;
-  }
-}
-
-@media screen and (max-width: 375px) {
-  .projects_page .project_section {
-    padding: 0px 5px;
-  }
-
-  .project_section h1 {
-    font-size: 20px;
-  }
-
-  .project_section h2 {
-    font-size: 18px;
-    /* letter-spacing: 1px; */
-  }
-
-  .project_section h3 {
-    font-size: 16px;
-  }
-
-  .project_section p {
-    font-size: 14px;
-  }
-}
-
-/* Part 5: Current work page styling  */
-.currentwork_page {
-  width: 100%;
-  /* height: 60vh; */
-  min-height: 70vh;
-  /* display: flex; */
-  justify-content: center;
-  align-items: center;
-  background-color: var(--projectspage);
-  padding: 8% 8%;
-  position: relative;
-  z-index: 0;
-}
-
-.currentwork_section h1 {
-  color: var(--button1);
-  font-size: 50px;
-  font-weight: bolder;
-  display: inline-block;
-  margin-bottom: 5px;
-  position: relative;
-  /* text-decoration:underline; */
-}
-
-.currentwork_section h1::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 1.5px;
-  top: 110%;
-  left: 0;
-  background-color: var(--navibar);
-}
-
-.currentwork_section p {
-  font-size: 20px;
-  line-height: 1.2;
-  padding: 20px;
-  font-weight: 100px;
   text-align: center;
+  color: var(--button1);
 }
 
-.currentwork_section button {
-  border: none;
+.projects_page .card-wrapper {
   display: flex;
   align-items: center;
-  margin-top: 10px;
   justify-content: center;
-  margin: 0 auto;
+  min-height: auto;
+  /* max-width: 1100px; */
+  margin: 0 60px 35px;
+  padding: 20px 10px;
+  overflow: hidden;
+
 }
 
-.currentwork_section button .currentwork_button {
-  font-size: 20px;
-  font-weight: 500;
-  color: var(--button1);
-  background: var(--navibar);
-  cursor: pointer;
-  transition: 0.5s;
+.card-list .card-item {
+  list-style: none;
+}
+
+.card-list .card-item .card-link {
+  user-select: none;
+  display: block;
+  background: #5b86869c;
+  padding: 18px;
+  border-radius: 12px;
   text-decoration: none;
-  outline: none;
-  padding: 8px 18px;
+  border: 2px solid transparent;
+  box-shadow: 3px 10px 10px rgb(0, 0, 0, 0.25);
+  transition: 0.2s ease;
+}
+
+.card-list .card-item .card-link:active {
+  cursor: grabbing;
+}
+
+.card-list .card-item .card-link:hover {
+  border-color: var(--button1);
+}
+
+.card-list .card-link .card-image {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: fill;
   border-radius: 10px;
 }
 
-.currentwork_section button .currentwork_button:hover {
+.card-list .card-link .badge {
+  color: var(--currentback);
+  font-weight: bold;
+  padding: 0 8px;
+  font-size: 25px;
+}
+
+.card-list .card-link h3 {
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  font-style: italic;
+  padding: 8px 16px;
+  font-weight: 300;
+}
+
+.card-list .card-link .card-title {
+  font-size: 20px;
+  color: black;
+  font-weight: 400;
+}
+
+.card-list .card-link .card-button {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  margin: 20px 0 5px;
+  transform: rotate(-45deg);
+  background: var(--button1);
+  cursor: pointer;
+  color: white;
+  font-size: 40px;
+  transition: 0.4s ease;
+  border: 2px solid var(--button1);
+
+}
+
+.card-list .card-link:hover .card-button {
   color: var(--hovercolor);
   background: var(--currentback);
-  text-decoration: underline;
-  transition: 0.3s;
+  border: none;
 }
 
-@media screen and (max-width:410px) {
-  .currentwork_section h1 {
+.card-wrapper .swiper-pagination-bullet {
+  height: 13px;
+  width: 13px;
+  background: var(--button1);
+  padding: 0px;
+  margin: 0px;
+}
+
+.card-wrapper .swiper-slide-button {
+  color: var(--button1);
+  margin-top: -35px;
+}
+
+
+
+@media screen and (max-width:768px) {
+  .card-wrapper {
+    margin: 0 10px 25px;
+  }
+
+}
+
+@media screen and (max-width:450px) {
+  .projects_page .card-wrapper {
+    margin: 0 30px 35px;
+  }
+
+  .projects_page h1 {
     font-size: 25px;
+    padding-bottom: 15px;
   }
 
-  .currentwork_section p {
+  .card-list .card-link .card-title {
     font-size: 15px;
   }
 
-  .currentwork_section button .currentwork_button {
-    font-size: 15px;
-    padding: 8px;
+  .card-list .card-link .badge {
+    font-size: 17px;
   }
+
+  .card-list .card-link h3 {
+    font-size: 17px;
+  }
+
+  .card-wrapper .swiper-slide-button {
+    color: var(--button1);
+    margin-top: auto;
+    margin-left: -5px;
+    margin-right: -5px;
+  }
+
+  .card-wrapper .swiper-pagination-bullet {
+    height: 13px;
+    width: 13px;
+
+  }
+
 }
 
-@media screen and (max-width: 375px) {
-  .currentwork_page /.currentwork_section {
-    padding: 5px;
-    margin: 0;
+@media screen and (max-width:375px) {
+  .projects_page {
+    margin: 0px;
+    padding: 0px;
   }
 
-  .currentwork_section h1 {
-    font-size: 24px;
+  .card-wrapper .swiper-slide-button {
+    display: none;
   }
 
-  .currentwork_section p {
+  .projects_page h1 {
     font-size: 20px;
   }
 
-  .currentwork_section button .currentwork_button {
-    font-size: 14px;
+  .projects_page .card-wrapper {
+    margin: 20px;
+    padding: 0px;
+  }
+
+  .card-list .card-link .badge {
+    font-size: 13px;
+    padding: 0px;
+  }
+
+  .card-list .card-link h3 {
+    font-size: 17px;
+    padding: 0px;
+  }
+
+  .card-list .card-link .card-title {
+    font-size: 12px;
+    padding: 0px;
+  }
+
+  .card-list .card-link .card-button {
+    height: 30px;
+    width: 30px;
+    margin: 5px 0 5px;
+
+    font-size: 30px;
+
+  }
+
+  .card-wrapper .swiper-pagination-bullet {
+    height: 10px;
+    width: 10px;
+
+  }
+
+}
+
+/* Part 5: Current work page styling  */
+.currents {
+  padding: 40px;
+  background-color: var(--projectspage);
+  height: auto;
+}
+
+.currents h1 {
+  font-size: 60px;
+  text-align: center;
+  font-weight: bolder;
+  color: var(--button1);
+  padding-bottom: 10px;
+}
+
+.currents .works {
+  display: grid;
+}
+
+.currents .works .pics {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 70% 30%;
+  gap: 0px;
+
+}
+
+.currents .works .pics .images {
+  gap: 0px;
+  border-right: 5px solid var(--currentback);
+  /* width: auto; */
+
+}
+
+.currents .works .pics .images a {
+  height: 200px;
+}
+
+.currents .works .pics .images a img {
+  width: 31%;
+}
+
+.currents .works .pics .text {
+  padding-left: 30px;
+  text-align: center;
+  align-items: center;
+  padding-top: 100px;
+
+}
+
+.currents .works .pics .text p {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+ /* .currents .works .pics .images {
+  position: relative;
+} */
+
+
+
+.currents .works .pics .text a {
+  font-size: 20px;
+  text-decoration: none;
+  color: var(--navibar);
+  font-weight: bold;
+  border: 2px solid var(--navibar);
+  border-radius: 30px;
+  padding: 10px;
+
+}
+
+.currents .works .pics .text a:hover {
+  color: var(--hovercolor);
+  background: var(--hoverfade);
+  transition: 0.3s ease;
+  border: none;
+}
+
+@media screen and (max-width:786px) {
+  .currents .works .pics .text a {
+    padding: 5px;
+    font-size: 20px;
+  }
+
+  .currents .works .pics .text {
+    padding-left: 10px;
   }
 }
+
+@media screen and (max-width:640px) {
+  .currents {
+    padding: 20px;
+  }
+
+  .currents .works .pics .text a {
+    padding: 5px;
+    font-size: 15px;
+  }
+
+}
+
+@media screen and (max-width:480px) {
+  .currents {
+    padding: 30px;
+  }
+
+  .currents h1 {
+    font-size: 25px;
+  }
+
+  .currents .works .pics {
+    display: block;
+    grid-template-columns: none
+  }
+
+  .currents .works .pics .images {
+    border-right: none;
+
+  }
+
+  .currents .works .pics .text {
+    padding-top: 10px;
+  }
+
+  .currents .works .pics .text p {
+    font-size: 15px;
+  }
+
+  .currents .works .pics .images a img {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width:375px) {
+  .currents {
+    padding: 8px;
+  }
+
+  .currents .works .pics .text a {
+    padding: 5px;
+    font-size: 13px;
+  }
+}
+
 
 /* Part 6: Contact page styling */
 .contact_page {
@@ -822,6 +979,14 @@ Universal styles */
   .contact_page .contact_contents p a {
     font-weight: 300px;
     font-size: 20px;
+  }
+
+  .currents .works .pics .images {
+    padding-left: 10px;
+  }
+
+  .currents .works .pics .images a img {
+    width: 48%;
   }
 
   .contact_page .contact_contents .close {
@@ -914,6 +1079,10 @@ Universal styles */
 
   .footer_page .social_links {
     padding: 5px;
+  }
+
+  .currents .works .pics {
+    padding-bottom: 20px;
   }
 
   .footer_page .social_links a {
