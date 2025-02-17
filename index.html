@@ -10,6 +10,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_forward" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
     integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -86,35 +89,127 @@
   </div>
 
   <!-- Part 4:Project Highlights -->
-  <div class="projects_page">
-    <div class="projects_contents">
-      <section class="project_section">
-        <h1>PROJECTS SPOTLIGHT</h1>
-        <h2>Kenya Flood Hazard Exposure</h2>
-        <h3>Personal Project I Carried Out For Skills Enhancement</h3>
-        <p>
-          This project examines the vulnerability of Kenya to floods.Through
-          analysis of historical floods data, this project determines the
-          flood hazard exposure in relation to population.
-        </p>
-      </section>
+  <div class="projects_highlight">
+    <div class="projects_page swiper ">
+      <h1>PROJECTS SPOTLIGHT</h1>
+
+      <div class="card-wrapper">
+        <ul class="card-list swiper-wrapper">
+          <!-- 1st project highlight -->
+          <li class="card-item swiper-slide">
+            <a href="Projects/Kenya_population_analysis.html" class="card-link">
+              <img class="card-image" src="Projects/pro_images/ke_pop_density_map.png" alt="Kenya Map">
+              <h2 class="badge">Kenya Population Density Analysis</h2>
+              <h3>Personal Project</h3>
+              <p class="card-title">This project examines Kenya's 2019 population census using Python's Pandas,
+                Geopandas,
+                and Matplotlib. The
+                results are presented in tables, bar graph, choropleth map, and interactive map. Each county's
+                population
+                density can be viewed on the interactive map upon hovering on the specific county.</p>
+
+              <button class="card-button material-symbols-rounded">
+                arrow_forward
+              </button>
+            </a>
+          </li>
+          <!-- 2nd project highlight -->
+          <li class="card-item swiper-slide">
+            <a href="Projects/Kenya_population_analysis.html" class="card-link">
+              <img class="card-image" src="Projects/pro_images/ke_pop_density_map.png" alt="Kenya Map">
+              <h2 class="badge">Kenya Population Density Analysis</h2>
+              <h3>Personal Project</h3>
+              <p class="card-title">This project examines Kenya's 2019 population census using Python's Pandas,
+                Geopandas,
+                and Matplotlib. The
+                results are presented in tables, bar graph, choropleth map, and interactive map. Each county's
+                population
+                density can be viewed on the interactive map upon hovering on the specific county.</p>
+
+              <button class="card-button material-symbols-rounded">
+                arrow_forward
+              </button>
+            </a>
+          </li>
+          <!-- 3rd project highlight -->
+          <li class="card-item swiper-slide">
+            <a href="Projects/Kenya_population_analysis.html" class="card-link">
+              <img class="card-image" src="Projects/pro_images/ke_pop_density_map.png" alt="Kenya Map">
+              <h2 class="badge">Kenya Population Density Analysis</h2>
+              <h3>Personal Project</h3>
+              <p class="card-title">This project examines Kenya's 2019 population census using Python's Pandas,
+                Geopandas,
+                and Matplotlib. The
+                results are presented in tables, bar graph, choropleth map, and interactive map. Each county's
+                population
+                density can be viewed on the interactive map upon hovering on the specific county.</p>
+
+              <button class="card-button material-symbols-rounded">
+                arrow_forward
+              </button>
+            </a>
+          </li>
+          <!-- 4th highlight project  -->
+          <li class="card-item swiper-slide">
+            <a href="Projects/Kenya_population_analysis.html" class="card-link">
+              <img class="card-image" src="Projects/pro_images/ke_pop_density_map.png" alt="Kenya Map">
+              <h2 class="badge">Kenya Population Density Analysis</h2>
+              <h3>Personal Project</h3>
+              <p class="card-title">This project examines Kenya's 2019 population census using Python's Pandas,
+                Geopandas,
+                and Matplotlib. The
+                results are presented in tables, bar graph, choropleth map, and interactive map. Each county's
+                population
+                density can be viewed on the interactive map upon hovering on the specific county.</p>
+
+              <button class="card-button material-symbols-rounded">
+                arrow_forward
+              </button>
+            </a>
+          </li>
+        </ul>
+        <div class="projectss">
+          <div class="swiper-pagination"></div>
+          <div class="swiper-slide-button swiper-button-prev"></div>
+          <div class="swiper-slide-button swiper-button-next"></div>
+        </div>
+      </div>
     </div>
   </div>
+
+
   <!-- Part 5: Current Project -->
-  <div class="currentwork_page">
-    <div class="currentwork_contents">
-      <section class="currentwork_section">
-        <h1>CURRENT WORK</h1>
-        <p>
-          Check out my current projects/ research in GIS, Remote Sensing,
-          GeoAI, etc...
-        </p>
-        <button>
-          <a href="research.html" class="currentwork_button">More Research</a>
-        </button>
-      </section>
+  <div class="currents">
+    <h1>CURRENT WORK</h1>
+    <div class="works">
+      <div class="pics">
+        <div class="images">
+          <a class="imgs" href="Projects/Kenya_population_analysis.html">
+            <img src="../Projects/pro_images/kenya_pop_map.jpeg" width="320px" height="200px">
+            <!-- <p class="text-title">
+              Kenya Population Density Analysis
+            </p> -->
+          </a>
+          <a href="Projects/Kenya_population_analysis.html"> <img src="../Projects/pro_images/kenya_pop_map.jpeg"
+              width="320px" height="200px"></a>
+          <a href="Projects/Kenya_population_analysis.html"> <img src="../Projects/pro_images/kenya_pop_map.jpeg"
+              width="320px" height="200px"></a>
+          <a href="Projects/Kenya_population_analysis.html"> <img src="../Projects/pro_images/kenya_pop_map.jpeg"
+              width="320px" height="200px"></a>
+          <a href="Projects/Kenya_population_analysis.html"> <img src="../Projects/pro_images/kenya_pop_map.jpeg"
+              width="320px" height="200px"></a>
+          <a href="Projects/Kenya_population_analysis.html"> <img src="../Projects/pro_images/kenya_pop_map.jpeg"
+              width="320px" height="200px"></a>
+        </div>
+        <div class="text">
+          <p>Check out my current projects and research in GIS, Remote Sensing, GeoAI, etc...</p>
+          <a href="research.html" class="button">More Research</a>
+        </div>
+      </div>
     </div>
   </div>
+
+
   <!-- Part 6: Contact  -->
   <div id="contact" class="contact_page">
     <div class="contact_contents">
@@ -148,7 +243,7 @@
     <p>Copyright &copy 2025; Theresa Nyatichi Monari</span></p>
     <p>All rights reserved</p>
   </div>
-
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="script.js"></script>
 
 

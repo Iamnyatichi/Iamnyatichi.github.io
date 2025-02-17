@@ -94,8 +94,6 @@ function collectAll() {}
 
 // portfolio page buttons call
 
-
-
 document.addEventListener("DOMContentLoaded", function () {
   filterSelection("all"); // Show all items by default
 
@@ -136,4 +134,36 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // index/homepage projects pop-up
+// initialize swipper
+new Swiper(".card-wrapper", {
+  loop: false,
+  spaceBetween: 30,
+
+  // If we need pagination
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    dynamicBullets:true
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  // Responsive breakpoints
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+    1024: {
+      slidesPerView: 3,
+    },
+  },
+});
+
 
