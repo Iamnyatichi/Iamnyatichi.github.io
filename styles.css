@@ -123,7 +123,7 @@ Universal styles */
   }
 
   .header .add_cls {
-    height: 31.1vh;
+    height: 33vh;
   }
 
   .header .nav_bar ul li {
@@ -332,9 +332,11 @@ Universal styles */
   .home_image .home_content .title {
     font-size: 20px;
   }
-.home_image .home_content .interest button{
-  margin: 0px;
-}
+
+  .home_image .home_content .interest button {
+    margin: 0px;
+  }
+
   .home_image .home_content .interest .home_button {
     font-size: 13px;
     padding: 5px;
