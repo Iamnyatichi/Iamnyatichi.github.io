@@ -138,6 +138,13 @@ Universal styles */
   }
 }
 
+@media screen and (max-width:450px) {
+  .header .nav_bar ul {
+    line-height: 15px;
+  }
+
+}
+
 @media screen and (max-width: 375px) {
   .header {
     margin: 0;
@@ -145,12 +152,12 @@ Universal styles */
 
   .header .nav_bar ul li a {
     font-size: 20px;
-    line-height: 40px;
+    /* line-height: 60px; */
     padding: 0px;
   }
 
   .header .add_cls {
-    height: 25vh;
+    /* height: 30vh; */
   }
 }
 
