@@ -158,103 +158,112 @@ Universal styles */
 .home_image {
   z-index: 0;
   margin-top: 60px;
-  background-image: url("images/home-page-image.png");
-  background-position: center bottom;
-  background-size: cover;
-  background-repeat: no-repeat;
-  min-height: 88vh;
+  /* background: rgba(117, 151, 164, 0.83); */
   height: 100%;
   width: 100%;
-  image-rendering: auto;
-}
-
-.home_image::after {
-  content: "";
-  /* position: absolute; */
-  top: 0;
-  left: 0;
+  background: url(images/home-page-image.png);
 }
 
 .home_image .home_content {
   line-height: 1.2;
   padding: 0 50px;
-  /* font-weight: bolder; */
   text-align: center;
-  padding-top: 150px;
+  padding: 50px;
 }
 
-.home_image .home_content .name {
+.home_image .home_content .welcome {
+  background: rgba(0, 0, 0, 0.725);
+  width: 50%;
+}
+
+.home_image .home_content .welcome .name {
   font-size: 50px;
   font-weight: bolder;
-  padding-bottom: 10px;
+  padding-top: 20px;
+  color: white;
+}
+
+.home_image .home_content .welcome p {
+  font-size: 20px;
+  padding: 10px 20px 30px 40px;
+  text-align: left;
+  color: white;
+  line-height: 1.5;
+  font-weight: 350;
+}
+
+.home_image .home_content .welcome p .boldier {
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.home_image .home_content .interest {
+  margin: 10px 100px;
+  background: rgba(202, 199, 199, 0.603);
+  padding-bottom: 20px;
+  border-radius: 20px;
 }
 
 .home_image .home_content .title {
-  font-size: 75px;
+  font-size: 70px;
   font-weight: bolder;
   padding-bottom: 20px;
-  padding-top: 20px;
   text-shadow: 2px 2px var(--navibar);
 }
 
-.home_image .home_content p {
+.home_image .home_content .interest p {
   font-weight: 500;
-  font-size: 25px;
-  padding-top: 10px;
+  font-size: 20px;
+  padding: 10px;
 }
 
 .home_image .home_content button {
-  border: none;
-  outline: none;
-  margin-top: 30px;
+  background: none;
+  margin: 30px;
+  margin-bottom: 10px;
+
 }
 
 .home_image .home_content .home_button {
   font-size: 20px;
   font-weight: 500;
-  color: var(--hovercolor);
-  background: var(--navibar);
+  color: var(--navibar);
+  border: 2px solid var(--navibar);
+  /* background: white; */
   cursor: pointer;
   transition: 0.5s;
   text-decoration: none;
-  outline: none;
   padding: 8px 18px;
-  border-radius: 10px;
+  border-radius: 30px;
   font-weight: bold;
 }
 
 
 .home_image .home_content .home_button:hover {
-  background-color: rgba(255, 255, 255, 0.968);
+  background: var(--hoverfade);
   border: none;
-  color: var(--button1);
+
+}
+
+@media screen and (max-width:1280px) {
+  .home_image .home_content .welcome {
+    width: 100%;
+  }
+
+  .home_image .home_content .interest {
+    margin: 10px 50px;
+  }
 
 }
 
 @media screen and (max-width: 768px) {
-  .home_image {
-    height: 100%;
-  }
 
   .home_image .home_content {
-    padding: 50px;
+    padding: 30px;
   }
 
-  .home_image .home_content .name {
-    font-size: 38px;
-    padding-bottom: 35px;
-  }
-
-  .home_image .home_content .title {
-    font-size: 45px;
-    text-shadow: 1px 1px var(--navibar);
-    padding: 0px;
-  }
-
-  .home_image .home_content .home_desc {
-    font-size: 25px;
-    padding: 5px 5px;
-    margin: 15px 15px;
+  .home_image .home_content .interest {
+    margin: 10px 10px;
   }
 
   .home_image .home_content button {
@@ -267,26 +276,15 @@ Universal styles */
   }
 }
 
-@media screen and (max-width: 410px) {
-  .home_image .home_content {
-    padding: 30px;
-  }
+@media screen and (max-width: 450px) {
 
-  .home_image .home_content .name {
+  .home_image .home_content .welcome .name {
     font-size: 30px;
-    padding-bottom: 35px;
   }
 
   .home_image .home_content .title {
-    font-size: 35px;
+    font-size: 40px;
     text-shadow: 1px 1px var(--navibar);
-    /* padding: 0px; */
-  }
-
-  .home_image .home_content .home_desc {
-    font-size: 20px;
-    padding-top: 20px;
-    margin: 10px 10px;
   }
 
   .home_image .home_content button {
@@ -301,41 +299,44 @@ Universal styles */
 
 @media screen and (max-width: 375px) {
   .header {
-    /* height: 100%; */
     width: 100%;
   }
 
-  .home_image {
-    height: 100%;
-  }
-
   .home_image .home_content {
-    padding-top: 20px;
-    padding-left: 5px;
+    padding: 20px;
   }
 
-  .home_image .home_content .name {
-    font-size: 25px;
-    padding-bottom: 5px;
+  .home_image .home_content .welcome .name {
+    font-size: 20px;
+  }
+
+  .home_image .home_content .welcome p {
+    font-size: 15px;
+    padding: 15px;
+  }
+
+  .home_image .home_content .welcome p .boldier {
+    font-size: 15px;
+  }
+
+  .home_image .home_content .interest p {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width:300px) {
+  .home_image .home_content {
+    padding: 8px;
   }
 
   .home_image .home_content .title {
     font-size: 20px;
-    padding-top: 5px;
   }
-
-  .home_image .home_content .home_desc {
-    font-size: 14px;
-    padding: 0px;
-    /* margin: 10px; */
-  }
-
-  .home_image .home_content button {
-    margin: 10px;
-  }
-
-  .home_image .home_content .home_button {
-    font-size: 15px;
+.home_image .home_content .interest button{
+  margin: 0px;
+}
+  .home_image .home_content .interest .home_button {
+    font-size: 13px;
     padding: 5px;
   }
 }
@@ -378,11 +379,11 @@ Universal styles */
 
 .about_page .about_section p {
   font-size: 20px;
-  padding: 10px;
+  padding: 5px;
+  margin-bottom: 0px;
 }
 
 .about_page .about_section .social_links {
-  padding-top: 20px;
   margin: 10px;
   text-align: center;
 }
@@ -410,24 +411,30 @@ Universal styles */
   transition: 0.5s;
 }
 
+.about_page .about_section button {
+  background: none;
+  margin: 15px;
+}
+
 .about_page .about_section button .about_button {
   font-size: 20px;
   font-weight: 500;
-  color: var(--hovercolor);
-  background: var(--navibar);
+  color: var(--navibar);
+  background: none;
   cursor: pointer;
   transition: 0.5s;
   text-decoration: none;
   outline: none;
-  padding: 8px 18px;
-  border-radius: 10px;
+  padding: 5px 10px;
+  border: 2px solid var(--navibar);
+  border-radius: 30px;
 }
 
 .about_section button .about_button:hover {
-  color: var(--button1);
   font-weight: bolder;
   background: var(--hoverfade);
   transition: 0.3s;
+  border: none;
 }
 
 @media screen and (max-width: 786px) {
@@ -459,7 +466,7 @@ Universal styles */
   }
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 450px) {
   .about_page {
     padding: 0px;
   }
@@ -488,16 +495,20 @@ Universal styles */
     font-size: 15px;
   }
 
+  .about_page .about_section .social_links {
+    margin: 20px;
+  }
+
   .about_page .about_section .social_links a {
     padding: 10px;
     margin: 10px;
-    font-size: 20px;
+    font-size: 22px;
   }
 
   .about_page .about_section .social_links a i {
     padding: 5px;
     margin-top: 0px;
-    font-size: 20px;
+    font-size: 24px;
   }
 
   .about_page .profile_image .pic_image {
@@ -508,7 +519,7 @@ Universal styles */
 
 @media screen and (max-width: 375px) {
   .about_page h1 {
-    padding-top: 0px;
+    padding-top: 10px;
     font-size: 25px;
 
   }
@@ -519,14 +530,23 @@ Universal styles */
     /* object-fit:fill; */
   }
 
+  .about_page .about_section button {
+    margin: 5px;
+    margin-bottom: 10px;
+  }
+
   .about_page .about_section button .about_button {
     font-size: 10px;
     padding: 8px;
   }
 
+  .about_page .about_section .social_links {
+    margin: 10px;
+  }
+
   .about_page .about_section .social_links a {
-    padding: 4px;
-    margin: 0px;
+    padding: 5px;
+    margin: 10px;
     font-size: 15px;
   }
 
@@ -534,6 +554,14 @@ Universal styles */
     padding: 4px;
     margin: 0px;
     font-size: 14px;
+  }
+
+}
+
+@media screen and (max-width:216px) {
+  .about_page .about_section .social_links a {
+    margin: 0px;
+    padding: 3px;
   }
 
 }
@@ -762,7 +790,7 @@ Universal styles */
 }
 
 .currents h1 {
-  font-size: 60px;
+  font-size: 50px;
   text-align: center;
   font-weight: bolder;
   color: var(--button1);
@@ -784,16 +812,60 @@ Universal styles */
 .currents .works .pics .images {
   gap: 0px;
   border-right: 5px solid var(--currentback);
-  /* width: auto; */
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  object-fit: fill;
 
 }
 
-.currents .works .pics .images a {
+.currents .works .pics .images .image {
+  width: 32%;
   height: 200px;
+  position: relative;
+  margin: 0px;
+  padding: 0px;
 }
 
-.currents .works .pics .images a img {
-  width: 31%;
+.currents .works .pics .images .image img {
+  width: 100%;
+  display: block;
+  margin: auto;
+}
+
+.currents .works .pics .images .image .text-title {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0;
+  transition: 0.4s ease;
+
+}
+
+.currents .works .pics .images .image .text-title:hover {
+  opacity: 1;
+}
+
+.currents .works .pics .images .image .text-title p {
+  font-size: 18px;
+  color: var(--hovercolor);
+  text-align: center;
+}
+
+.currents .works .pics .images .image .text-title>* {
+  transform: translateY(25px);
+  transition: transform 0.6s;
+}
+
+.currents .works .pics .images .image .text-title:hover>* {
+  transform: translateY(0px);
 }
 
 .currents .works .pics .text {
@@ -808,12 +880,6 @@ Universal styles */
   font-size: 20px;
   margin-bottom: 20px;
 }
-
- /* .currents .works .pics .images {
-  position: relative;
-} */
-
-
 
 .currents .works .pics .text a {
   font-size: 20px;
@@ -834,45 +900,49 @@ Universal styles */
 }
 
 @media screen and (max-width:786px) {
-  .currents .works .pics .text a {
-    padding: 5px;
-    font-size: 20px;
-  }
-
-  .currents .works .pics .text {
-    padding-left: 10px;
-  }
-}
-
-@media screen and (max-width:640px) {
-  .currents {
-    padding: 20px;
-  }
-
-  .currents .works .pics .text a {
-    padding: 5px;
-    font-size: 15px;
-  }
-
-}
-
-@media screen and (max-width:480px) {
   .currents {
     padding: 30px;
   }
 
-  .currents h1 {
-    font-size: 25px;
+  .currents .works {
+    display: block;
   }
 
   .currents .works .pics {
     display: block;
-    grid-template-columns: none
+    grid-template-columns: none;
   }
 
   .currents .works .pics .images {
+    gap: 0px;
     border-right: none;
+    width: 100%;
+    padding: 10px;
 
+  }
+
+  .currents .works .pics .images .image {
+    height: 100%;
+    width: 33%;
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .currents .works .pics .images .image img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .currents .works .pics .text {
+    padding: 5px;
+    padding-top: 10px;
+  }
+}
+
+@media screen and (max-width:450px) {
+  .currents h1 {
+    font-size: 25px;
   }
 
   .currents .works .pics .text {
@@ -883,8 +953,13 @@ Universal styles */
     font-size: 15px;
   }
 
-  .currents .works .pics .images a img {
-    width: 40%;
+  .currents .works .pics .images .image .text-title p {
+    font-size: 8px;
+  }
+
+  .currents .works .pics .text a {
+    font-size: 15px;
+    padding: 8px;
   }
 }
 
@@ -893,9 +968,19 @@ Universal styles */
     padding: 8px;
   }
 
+  .currents .works .pics .images .image .text-title p {
+    font-size: 5px;
+  }
+
   .currents .works .pics .text a {
     padding: 5px;
     font-size: 13px;
+  }
+}
+
+@media screen and (max-width:200px) {
+  .currents .works .pics .images .image .text-title p {
+    font-size: 3px;
   }
 }
 
@@ -960,7 +1045,7 @@ Universal styles */
   /* padding-top: 50px; */
 }
 
-@media screen and (max-width: 435px) {
+@media screen and (max-width: 450px) {
   .contact_page .contact_contents {
     padding: 5px;
     /* display: flex; */
@@ -1036,6 +1121,7 @@ Universal styles */
   background-color: white;
   margin: 10px;
   border-radius: 50%;
+  font-size: 20px;
 }
 
 .footer_page .social_links a:hover {
@@ -1044,7 +1130,7 @@ Universal styles */
 }
 
 .footer_page .social_links a i {
-  font-size: 25px;
+  font-size: 28px;
   color: var(--navibar);
   /* text-align: center; */
 }
@@ -1128,15 +1214,11 @@ Universal styles */
 .home_landing.about_section {
   padding-top: 0px;
 
-
 }
 
 .home_landing .about_section p {
   font-size: 20px;
   padding: 10px;
-  /* padding-right: 100px; */
-
-
 }
 
 .home_landing .about_section p a {
@@ -1161,6 +1243,7 @@ Universal styles */
   background-color: var(--navibar);
   margin: 40px;
   border-radius: 50%;
+  font-size: 22px;
 }
 
 .home_landing .about_section .social_links a:hover {
@@ -1171,7 +1254,7 @@ Universal styles */
 .home_landing .about_section .social_links a i {
 
   color: white;
-  font-size: 25px;
+  font-size: 34px;
 }
 
 .home_landing .about_section .social_links a i:hover {
@@ -1216,7 +1299,7 @@ Universal styles */
   }
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 450px) {
   .home_landing {
     padding: 0px;
   }
@@ -1247,13 +1330,13 @@ Universal styles */
   .home_landing .about_section .social_links a {
     padding: 10px;
     margin: 10px;
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .home_landing .about_section .social_links a i {
-    padding: 5px;
+
     margin-top: 0px;
-    font-size: 20px;
+    font-size: 24px;
   }
 
   .home_landing .aboutme_content .me_image {
@@ -1314,6 +1397,7 @@ Universal styles */
   width: 100%;
   background-color: var(--lightgeneral);
   position: relative;
+
 }
 
 .research_interest h1 {
@@ -1321,6 +1405,7 @@ Universal styles */
   color: var(--button1);
   font-weight: bolder;
   text-align: center;
+  padding-bottom: 10px;
 }
 
 .research_interest h2 {
@@ -1329,19 +1414,23 @@ Universal styles */
   font-weight: bold;
   padding-top: 10px;
   padding-bottom: 5px;
+
 }
 
 .research_interest p {
   font-size: 20px;
   line-height: 2.0;
+  padding-left: 30px;
 }
 
 .skills {
   padding: 30px;
+  padding-top: 10px;
 }
 
 .skills ol {
   padding-left: 40px;
+  padding-top: 0px;
 }
 
 .skills ol li {
@@ -1361,28 +1450,31 @@ button {
   margin-top: 30px;
 }
 
+.research_interest button {
+  background: none;
+}
+
 .research_interest .resume {
   font-size: 20px;
   font-weight: bold;
-  color: var(--button1);
-  background: var(--navibar);
+  color: var(--navibar);
   cursor: pointer;
   transition: 0.5s;
   text-decoration: none;
   outline: none;
-  padding: 12px;
-  border-radius: 10px;
+  padding: 8px;
+  border: 2px solid var(--navibar);
+  border-radius: 30px;
 }
 
 .research_interest .resume:hover {
-  color: var(--hovercolor);
-  background: var(--currentback);
-  text-decoration: underline;
+  background: var(--hoverfade);
   transition: 0.3s;
+  border: none;
 }
 
 
-@media screen and (max-width:410px) {
+@media screen and (max-width:450px) {
 
   .research_interest {
     padding: 25px;
@@ -1399,6 +1491,7 @@ button {
 
   .research_interest p {
     font-size: 15px;
+    padding-left: 20px;
   }
 
   .skills {
@@ -1507,16 +1600,6 @@ button {
   margin-bottom: 80px;
 }
 
-/* .heading::after {
-  position: absolute;
-  content: ' ';
-  width: 50%;
-  height: 3px;
-  left: 50%;
-  bottom: -5px;
-  background-image: linear-gradient(to right, rgb(106, 6, 236), rgb(220, 0, 240));
-  transform: translateX(-50%);
-} */
 
 .resume_timeline {
   width: 70%;
@@ -1524,18 +1607,6 @@ button {
   position: relative;
   z-index: 0;
 }
-
-/* .resume_timeline::after {
-  position: absolute;
-  content: ' ';
-  width: 2px;
-  height: 100%;
-  background-image: linear-gradient(to bottom, rgb(106, 6, 236), rgb(220, 0, 240)); */
-/* left: 50%;
-  top: 0;
-  transform: translateX(-50%);*/
-/* z-index: 1;  
-}*/
 
 .resume_timeline ul {
   list-style: none;
@@ -1672,7 +1743,7 @@ ul li p {
   }
 }
 
-@media screen and (max-width:410px) {
+@media screen and (max-width:450px) {
   .my_resume h1 {
     font-size: 25px;
     padding-bottom: 10px;
@@ -1788,7 +1859,7 @@ ul li p {
   font-style: italic;
 }
 
-@media screen and (max-width:410px) {
+@media screen and (max-width:450px) {
   .education h2 {
     font-size: 25px;
     padding-bottom: 10px;
@@ -1891,7 +1962,7 @@ a:hover {
   padding-top: 20px;
 }
 
-@media screen and (max-width:410px) {
+@media screen and (max-width:450px) {
   .certification h2 {
     font-size: 20px;
     padding-bottom: 0px;
@@ -1912,7 +1983,7 @@ a:hover {
 
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 380px) {
   .certification h2 {
     font-size: 19px;
   }
@@ -1989,7 +2060,7 @@ a:hover {
   color: var(--hovercolor);
 }
 
-@media screen and (max-width:420px) {
+@media screen and (max-width:450px) {
 
   .portfolio_page h1 {
     font-size: 25px;
@@ -2065,9 +2136,9 @@ a:hover {
   }
 }
 
-@media screen and (max-width:420px) {
+@media screen and (max-width:450px) {
   .portfolio_section {
-    padding-left: 20px;
+    padding-left: 30px;
   }
 
   .portfolio_section .portfolio_item .portfolio_item_inner .portfolio_image a h3 {
@@ -2270,7 +2341,7 @@ a:hover {
   }
 }
 
-@media screen and (max-width:430px) {
+@media screen and (max-width:450px) {
   .credits h3 {
     font-size: 17px;
   }
@@ -2352,7 +2423,7 @@ a:hover {
   background-color: var(--contactbackground)
 }
 
-@media screen and (max-width:420px) {
+@media screen and (max-width:450px) {
   .project {
     padding: 20px;
   }
