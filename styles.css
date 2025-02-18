@@ -283,7 +283,7 @@ Universal styles */
   }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 478px) {
 
   .home_image .home_content .welcome .name {
     font-size: 30px;
