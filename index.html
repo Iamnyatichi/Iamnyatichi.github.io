@@ -2,11 +2,12 @@
 <html lang="en">
 
 <head>
-  <meta name="google-site-verification" content="VKYgG_M58xCQvP-7IPidfTyGnMbhIyME5Es0yzu7Q0I" />  
-  <meta name="description" content="I am passionate about leveraging GIScience, Remote Sensing, and GeoAI to drive environmental sustainability.">
+  <meta name="google-site-verification" content="VKYgG_M58xCQvP-7IPidfTyGnMbhIyME5Es0yzu7Q0I" />
+  <meta name="description"
+    content="I am passionate about leveraging GIScience, Remote Sensing, and GeoAI to drive environmental sustainability.">
   <meta charset="UTF-8">
   <meta name="author" content="Theresa Monari | GIS Portfolio">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Theresa Monari | GIS Portfolio</title>
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="media-queries.css" />
@@ -67,6 +68,8 @@
       </div>
     </div>
   </div>
+
+
   <!-- Part 3: About Me -->
   <div class="about_page" id="about">
     <h1>ABOUT ME</h1>
@@ -81,7 +84,10 @@
       <p>My name is Theresa Nyatichi Monari. <!-- Currently, I am a graduate student at South Dakota State University
         pursuing MS Geography - GIS Specialization.--> I am passionate about leveraging GIScience, Remote Sensing, and
         GeoAI to drive environmental sustainability.</p>
-      <p>My research focuses on harnessing the power of GIS, remote sensing, and AI for disaster response and management, aiming to create innovative solutions that enhance resilience and support affected communities. I enjoy creating maps and all things about Geography for environmental sustainability and leveraging technology and geospatial data to better comprehend our planet earth!
+      <p>My research focuses on harnessing the power of GIS, remote sensing, and AI for disaster response and
+        management, aiming to create innovative solutions that enhance resilience and support affected communities. I
+        enjoy creating maps and all things about Geography for environmental sustainability and leveraging technology
+        and geospatial data to better comprehend our planet earth!
       </p>
       <p style="font-style: italic;">"Mapping the world, one data point at a time for sustainability." 🌍</p>
       <button>
@@ -98,106 +104,103 @@
   </div>
 
   <!-- Part 4:Project Highlights -->
-  <div class="projects_highlight">
-    <div class="projects_page swiper ">
-      <h1>PROJECTS SPOTLIGHT</h1>
+  <div class="projects_highlight  "> <!-- Removed "Swiper" from here incase of future fails -->
+    <h1>PROJECTS HIGHLIGHTS</h1>
+    <div class="card-wrapper">
+      <ul class="project_highlight  card-list swiper-wrapper">
+        <!-- Kisii LULC analysis -->
+        <li class="card-item swiper-slide">
+          <a href="Projects/Kisii_LULC.html" class="card-link">
+            <img class="card-image" src="Projects/pro_images/Kisii_lulc_home.png" alt="Kenya Map">
+            <h2 class="badge">Kisii Land Use and Land Cover Analysis </h2>
+            <h3>Personal Project</h3>
+            <p class="card-title">This project aims to analyze and map the Land Use and Land Cover (LULC) of Kisii
+              county in Kenya, East Africa.
+              The
+              analysis utilizes ESRI’s ArcGIS Pro and QGIS software to classify land cover types, such as built-up
+              areas,
+              agricultural
+              land, and forests, as of 2024. The results will support sustainable land management, environmental
+              management, and
+              urban planning.</p>
 
-      <div class="card-wrapper">
-        <ul class="card-list swiper-wrapper">
+            <button class="card-button material-symbols-rounded">
+              arrow_forward
+            </button>
+          </a>
+        </li>
+        <!-- Kisii LULC analysis  -->
 
-          <!-- Kisii LULC analysis -->
-          <li class="card-item swiper-slide">
-            <a href="Projects/Kisii_LULC.html" class="card-link">
-              <img class="card-image" src="Projects/pro_images/Kisii_lulc_home.png" alt="Kenya Map">
-              <h2 class="badge">Kisii Land Use and Land Cover Analysis </h2>
-              <h3>Personal Project</h3>
-              <p class="card-title">This project aims to analyze and map the Land Use and Land Cover (LULC) of Kisii
-                county in Kenya, East Africa.
-                The
-                analysis utilizes ESRI’s ArcGIS Pro and QGIS software to classify land cover types, such as built-up
-                areas,
-                agricultural
-                land, and forests, as of 2024. The results will support sustainable land management, environmental
-                management, and
-                urban planning.</p>
+        <!-- Kenya Population analysis -->
+        <li class="card-item swiper-slide">
+          <a href="Projects/Kenya_population_analysis.html" class="card-link">
+            <img class="card-image" src="Projects/pro_images/map_kenya.jpg" alt="Kenya Map">
+            <h2 class="badge">Kenya's 2019 Population Density </h2>
+            <h3>Personal Project</h3>
+            <p class="card-title">In this project, Kenya's 2019 population census is analyzed using Python's Pandas,
+              Geopandas. The
+              results are presented in an interactive choropleth map using leaflet.js. Each county's
+              population
+              density can be viewed on the web map by clicking on the specific county.</p>
 
-              <button class="card-button material-symbols-rounded">
-                arrow_forward
-              </button>
-            </a>
-          </li>
-          <!-- Kisii LULC analysis  -->
+            <button class="card-button material-symbols-rounded">
+              arrow_forward
+            </button>
+          </a>
+        </li>
+        <!-- Kenya Population analysis  -->
 
-          <!-- Kenya Population analysis -->
-          <li class="card-item swiper-slide">
-            <a href="Projects/Kenya_population_analysis.html" class="card-link">
-              <img class="card-image" src="Projects/pro_images/map_kenya.jpg" alt="Kenya Map">
-              <h2 class="badge">Kenya's 2019 Population Density </h2>
-              <h3>Personal Project</h3>
-              <p class="card-title">In this project, Kenya's 2019 population census is analyzed using Python's Pandas,
-                Geopandas. The
-                results are presented in an interactive choropleth map using leaflet.js. Each county's
-                population
-                density can be viewed on the web map by clicking on the specific county.</p>
+        <!-- Cape town project highlight -->
+        <li class="card-item swiper-slide">
+          <a href="Projects/cape_town.html" class="card-link">
+            <img class="card-image" src="Projects/pro_images/cape_town.png" alt="Kenya Map">
+            <h2 class="badge">Cape Town 2017 Water Consumption </h2>
+            <h3>Personal Project</h3>
+            <p class="card-title">
+              This project features the 2017 water crisis in Cape Town city in South Africa using pandas and folium
+              libraries. The web maps show the
+              2017 average water
+              Consumption per suburb in the month of October. Users can select points showing pop-up of the suburb
+              name and water
+              Consumption per kilolitre.
+            </p>
 
-              <button class="card-button material-symbols-rounded">
-                arrow_forward
-              </button>
-            </a>
-          </li>
-          <!-- Kenya Population analysis  -->
+            <button class="card-button material-symbols-rounded">
+              arrow_forward
+            </button>
+          </a>
+        </li>
+        <!-- Cape town project  -->
 
-          <!-- Cape town project highlight -->
-          <li class="card-item swiper-slide">
-            <a href="Projects/cape_town.html" class="card-link">
-              <img class="card-image" src="Projects/pro_images/cape_town.png" alt="Kenya Map">
-              <h2 class="badge">Cape Town 2017 Water Consumption </h2>
-              <h3>Personal Project</h3>
-              <p class="card-title">
-                This project features the 2017 water crisis in Cape Town city in South Africa using pandas and folium
-                libraries. The web maps show the
-                2017 average water
-                Consumption per suburb in the month of October. Users can select points showing pop-up of the suburb
-                name and water
-                Consumption per kilolitre.
-              </p>
+        <!-- 3rd project highlight -->
+        <li class="card-item swiper-slide">
+          <a href="Projects/Kenya_population_analysis.html" class="card-link">
+            <img class="card-image" src="Projects/pro_images/map_kenya.jpg" alt="Kenya Map">
+            <h2 class="badge">Kenya Population Density Analysis</h2>
+            <h3>Personal Project</h3>
+            <p class="card-title">This project examines Kenya's 2019 population census using Python's Pandas,
+              Geopandas,
+              and Matplotlib. The
+              results are presented in tables, bar graph, choropleth map, and interactive map. Each county's
+              population
+              density can be viewed on the interactive map upon hovering on the specific county.</p>
 
-              <button class="card-button material-symbols-rounded">
-                arrow_forward
-              </button>
-            </a>
-          </li>
-          <!-- Cape town project  -->
+            <button class="card-button material-symbols-rounded">
+              arrow_forward
+            </button>
+          </a>
+        </li>
+        <!-- 4th highlight project  -->
 
-          <!-- 3rd project highlight -->
-          <li class="card-item swiper-slide">
-            <a href="Projects/Kenya_population_analysis.html" class="card-link">
-              <img class="card-image" src="Projects/pro_images/map_kenya.jpg" alt="Kenya Map">
-              <h2 class="badge">Kenya Population Density Analysis</h2>
-              <h3>Personal Project</h3>
-              <p class="card-title">This project examines Kenya's 2019 population census using Python's Pandas,
-                Geopandas,
-                and Matplotlib. The
-                results are presented in tables, bar graph, choropleth map, and interactive map. Each county's
-                population
-                density can be viewed on the interactive map upon hovering on the specific county.</p>
-
-              <button class="card-button material-symbols-rounded">
-                arrow_forward
-              </button>
-            </a>
-          </li>
-          <!-- 4th highlight project  -->
-
-        </ul>
-        <div class="projectss">
-          <div class="swiper-pagination"></div>
-          <div class="swiper-slide-button swiper-button-prev"></div>
-          <div class="swiper-slide-button swiper-button-next"></div>
-        </div>
+      </ul>
+      <div class="projectss">
+        <div class="swiper-pagination"></div>
+        <div class="swiper-slide-button swiper-button-prev"></div>
+        <div class="swiper-slide-button swiper-button-next"></div>
       </div>
     </div>
   </div>
+
 
 
   <!-- Part 5: Current Project -->
