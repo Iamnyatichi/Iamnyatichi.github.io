@@ -579,11 +579,13 @@ Universal styles */
 .projects_highlight {
   position: relative;
   z-index: 0;
+  height: 100%;
+  width: 100%;
 }
 
-.projects_page {
+.projects_highlight .projects_page {
   background-color: var(--lightgeneral);
-  padding: 40px;
+  padding:10px;
 
 }
 
@@ -696,6 +698,8 @@ Universal styles */
 .card-wrapper .swiper-slide-button {
   color: var(--button1);
   margin-top: -35px;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 
@@ -737,8 +741,8 @@ Universal styles */
   .card-wrapper .swiper-slide-button {
     color: var(--button1);
     margin-top: auto;
-    margin-left: -5px;
-    margin-right: -5px;
+    margin-left: 4px;
+    margin-right: 4px;
   }
 
   .card-wrapper .swiper-pagination-bullet {
