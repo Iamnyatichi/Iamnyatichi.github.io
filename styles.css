@@ -605,7 +605,7 @@ Universal styles */
 }
 
 .projects_highlight .card-wrapper {
-  
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -616,7 +616,8 @@ Universal styles */
   overflow: hidden;
 
 }
-.projects_highlight .card-wrapper .project_highlight{
+
+.projects_highlight .card-wrapper .project_highlight {
   margin-bottom: 30px;
 }
 
@@ -2708,7 +2709,9 @@ ul li p {
   width: 90%;
   align-items: center;
   display: block;
+  object-fit: contain;
   margin: auto;
+  max-height: 650px;
 }
 
 .method ul {
@@ -2765,4 +2768,16 @@ ul li p {
   .objectives ul {
     padding-left: 15px;
   }
+}
+
+/* Siaya Change Detection */
+
+.videos video {
+
+  display: block;
+  margin: auto;
+  align-items: center;
+  object-fit: contain;
+  width: 80%;
+  max-height: 650px;
 }
