@@ -15,6 +15,7 @@ Universal styles */
 
 /* defining colors */
 :root {
+  --bar: #344354;
   --navibar: #1b1b1b;
   --lightgeneral: #9d96963a;
   --hovercolor: #00ffff;
@@ -32,7 +33,7 @@ Universal styles */
   justify-content: space-evenly;
   align-items: center;
   height: 80px;
-  background: var(--navibar);
+  background: var(--bar);
   padding: 0 50px;
   color: var(--lightgeneral);
   z-index: 1;
@@ -44,10 +45,11 @@ Universal styles */
 
 .header .logo {
   font-size: 1.5em;
-  color: var(--hovercolor);
-  font-weight: 500;
+  color: whitesmoke;
+  font-weight: 1000;
   font-style: italic;
   text-decoration: none;
+  font-size: 17px;
 }
 
 .nav_bar ul {
@@ -61,23 +63,25 @@ Universal styles */
 
 .header .nav_bar ul li a {
   text-decoration: none;
-  color: var(--button1);
+  color: whitesmoke;
   padding: 0 20px;
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 1000;
   display: inline-block;
   line-height: 30px;
   transition: 0.25s;
 }
 
 .header .nav_bar ul li a:hover {
-  color: var(--hovercolor);
+  /* color: var(--hovercolor); */
+  border-bottom: 2px solid whitesmoke;
+  padding-bottom: 5px;
   /* background: var(--currentback); */
 }
 
 .header .nav_bar ul li a.active {
-  color: var(--hovercolor);
-  background-color: var(--currentback);
+  color: palevioletred;
+  /* background-color: var(--currentback); */
   padding: 5px;
 }
 
@@ -168,19 +172,21 @@ Universal styles */
   /* background: rgba(117, 151, 164, 0.83); */
   height: 100%;
   width: 100%;
-  background: url(images/home-page-image.png);
+  background-color: #344354;
+  /* background: url(images/home-page-image.png); */
 }
 
 .home_image .home_content {
   line-height: 1.2;
-  padding: 0 50px;
   text-align: center;
-  padding: 50px;
+  padding: 100px;
 }
 
 .home_image .home_content .welcome {
-  background: rgba(0, 0, 0, 0.725);
+  background: rgba(0, 0, 0, 0.525);
   width: 50%;
+  padding-bottom: 20px;
+  align-items: center;
 }
 
 .home_image .home_content .welcome .name {
@@ -204,41 +210,36 @@ Universal styles */
   font-weight: bolder;
 }
 
-.home_image .home_content .interest {
-  margin: 10px 100px;
-  background: rgba(202, 199, 199, 0.603);
-  padding-bottom: 20px;
-  border-radius: 20px;
-}
-
 .home_image .home_content .title {
-  font-size: 70px;
+  font-size: 60px;
   font-weight: bolder;
   padding-bottom: 20px;
+  color: black;
   text-shadow: 2px 2px var(--navibar);
 }
 
-.home_image .home_content .interest p {
-  font-weight: 500;
+.home_image .home_content p {
   font-size: 20px;
+  font-weight: bold;
   padding: 10px;
+  margin-bottom: 10px;
+  color: rgba(245, 245, 245, 0.623);
 }
 
 .home_image .home_content button {
   background: none;
-  margin: 30px;
-  margin-bottom: 10px;
+  margin: 0px;
 
 }
 
 .home_image .home_content .home_button {
   font-size: 20px;
   font-weight: 500;
-  color: var(--navibar);
-  border: 2px solid var(--navibar);
+  color: whitesmoke;
+  border: 2px solid whitesmoke;
   /* background: white; */
   cursor: pointer;
-  transition: 0.5s;
+  transition: 0.3s;
   text-decoration: none;
   padding: 8px 18px;
   border-radius: 30px;
@@ -247,7 +248,7 @@ Universal styles */
 
 
 .home_image .home_content .home_button:hover {
-  background: var(--hoverfade);
+  background: var(--bar);
   border: none;
 
 }
@@ -356,6 +357,14 @@ Universal styles */
   width: 100%;
   background-color: var(--projectspage);
   position: relative;
+  align-items: center;
+  padding-bottom: 140px;
+}
+
+.about_page .focus-content {
+  max-width: 1200px;
+  margin: auto;
+  align-items: center;
 }
 
 .about_page h1 {
@@ -376,7 +385,8 @@ Universal styles */
 }
 
 .about_page .about_section {
-  padding-top: 0px;
+  padding-top: 60px;
+  
 }
 
 .about_page .about_section h2 {
@@ -446,10 +456,21 @@ Universal styles */
   border: none;
 }
 
+@media screen and (max-width: 940px) {
+  .about_page {
+    padding-bottom: 100px;
+  }
+    .about_page .about_section {
+      padding-top: 0px;
+  
+    }
+}
+
 @media screen and (max-width: 786px) {
   .about_page {
     padding: 15px 15px 30px 15px;
     position: relative;
+
   }
 
   .about_page .about_section {
@@ -1149,7 +1170,7 @@ Universal styles */
 
 /* Part 7: Footer stles  */
 .footer_page {
-  background: var(--footerbackground);
+  background: var(--bar);
   align-items: center;
   width: 100%;
   height: 100%;
@@ -1195,7 +1216,7 @@ Universal styles */
 
 .footer_bottom {
   color: white;
-  background: var(--navibar);
+  background: var(--bar);
   padding: 15px;
   text-align: center;
   font-size: 150px;
@@ -1473,7 +1494,8 @@ Universal styles */
 .research_interest p {
   font-size: 20px;
   line-height: 2.0;
-  padding-left: 30px;
+  align-items: center;
+  padding: 30px ;
 }
 
 .skills {
