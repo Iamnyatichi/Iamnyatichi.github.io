@@ -386,7 +386,7 @@ Universal styles */
 
 .about_page .about_section {
   padding-top: 60px;
-  
+
 }
 
 .about_page .about_section h2 {
@@ -460,10 +460,11 @@ Universal styles */
   .about_page {
     padding-bottom: 100px;
   }
-    .about_page .about_section {
-      padding-top: 0px;
-  
-    }
+
+  .about_page .about_section {
+    padding-top: 0px;
+
+  }
 }
 
 @media screen and (max-width: 786px) {
@@ -1495,7 +1496,7 @@ Universal styles */
   font-size: 20px;
   line-height: 2.0;
   align-items: center;
-  padding: 30px ;
+  padding: 30px;
 }
 
 .skills {
@@ -1647,10 +1648,52 @@ button {
 }
 
 /* Document3: Resume */
+.resume {
+  margin-top: 60px;
+  padding: 40px;
+  padding-bottom: 0px;
+  width: 100%;
+  background-color: var(--lightgeneral);
+  position: relative;
+}
+
+.resume h1 {
+  font-size: 60px;
+  color: var(--button1);
+  font-weight: bolder;
+  text-align: center;
+}
+
+@media screen and (max-width: 786px) {
+
+  .resume {
+    padding: 15px;
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .resume {
+    padding: 0px;
+  }
+
+  .resume h1 {
+    font-size: 25px;
+    padding-top: 20px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .resume {
+    padding: 5px;
+  }
+
+}
+
+
 .my_resume {
   width: 100%;
   height: auto;
-  margin-top: 60px;
   padding: 40px;
   width: 100%;
   background-color: var(--projectspage);
@@ -2533,6 +2576,11 @@ ul li p {
 }
 
 /* Document 6: Maps Collection:  */
+/* .maps_body{
+  margin-top: 60px;
+  width: 100%;
+  position: relative;
+} */
 .maps_welcome {
   margin-top: 40px;
   padding: 60px 20px 0 40px;
@@ -2566,7 +2614,7 @@ ul li p {
 }
 
 .maps_collage table {
-  width: 100%;
+  max-width: 100%;
   border: 2px solid var(--button1);
 }
 
@@ -2580,30 +2628,20 @@ ul li p {
 
 .maps_collage td {
   border: 2px solid black;
-  /* width: 50%;   */
-}
-
-.maps_collage .map {
-  width: 70%;
+  width: 25%;
 }
 
 .maps_collage td img {
   width: 100%;
-  padding: 10px;
+  padding: 5px;
+
 }
 
-.maps_collage li {
-  list-style: none;
-  padding: 10px;
-  font-size: 20px;
-  text-align: center;
+.maps_collage p {
+  padding: 5px;
+  font-size: 15px;
 }
 
-.maps_collage li a {
-  text-decoration: none;
-  /* color: black; */
-  font-size: 20px;
-}
 
 @media screen and (max-width:450px) {
   .maps_welcome {
@@ -2638,12 +2676,12 @@ ul li p {
     padding: 5px;
   }
 
-  .maps_collage li {
-    font-size: 15px;
+  .maps_collage p {
+    font-size: 8px;
   }
 
-  .maps_collage li a {
-    font-size: 15px;
+  .maps_collage p a {
+    font-size: 8px;
   }
 }
 
@@ -2669,7 +2707,7 @@ ul li p {
   }
 
   .maps_collage {
-    padding: 10px 5px 20px 5px;
+    padding: 5px 5px 5px 5px;
   }
 
   .maps_collage .head {
@@ -2677,17 +2715,19 @@ ul li p {
   }
 
   .maps_collage td img {
-    padding: 5px;
+    padding: 1px;
   }
 
-  .maps_collage li {
-    font-size: 10px;
+  .maps_collage p {
+    font-size: 5px;
   }
 
-  .maps_collage li a {
-    font-size: 10px;
+  .maps_collage p a {
+    font-size: 5px;
   }
 }
+
+
 
 /* Kisii LULC Project  */
 .objectives {
