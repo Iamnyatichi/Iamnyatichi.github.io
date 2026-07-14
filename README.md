@@ -1,5 +1,5 @@
 ## Personal Website
-Hello! Welcome to my portfolio. I recently graduated with my Bachelors in Surveying Technology and I am passionate about all things GIS, remote sensing, and AI (GEOAI) for disaster response and management and environmental sustainability. This portfolio features my projects and experiences.
+Hello! Welcome to my portfolio. I am passionate about geospatial artificial intelligence, urban analytics, transportation networks, environmental health, disaster resilience, and smart cities. I enjoy exploring how spatial data, machine learning, and network analysis can be integrated to address real-world challenges related to infrastructure, accessibility, and sustainable urban development.
 
 Check my Portfolio!
 
