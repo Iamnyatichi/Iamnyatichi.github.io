@@ -56,8 +56,7 @@ Universal styles */
 
 .header .nav_bar ul li a:hover {
 
-  border-bottom: 2px solid var(--hover);
-  padding-bottom: 5px;
+  color: var(--hover);
 }
 
 .header .nav_bar ul li a.active {
@@ -91,7 +90,7 @@ Universal styles */
   .header .nav_bar {
     position: absolute;
     width: 100%;
-    margin: 0px;
+    margin: 10px;
     height: 0vh;
     top: 60px;
     left: 0;
