@@ -21,17 +21,6 @@ Universal styles */
   --text: #eae4d8;
   --bcgc: #181818;
   --hover: lightpink;
-
-  --bar: #344354;
-  --navibar: #1b1b1b;
-  --lightgeneral: #9d96963a;
-  --hovercolor: #00ffff;
-  --currentback: #27365d;
-  --button1: rgb(148, 8, 136);
-  --hoverfade: #5b8686;
-  --projectspage: rgba(117, 151, 164, 0.23);
-  --contactbackground: #5b8686c6;
-  --footerbackground: rgba(4, 90, 84, 0.781);
 }
 
 /* part 1: navigation bar styling */
@@ -101,7 +90,6 @@ Universal styles */
 
   .header .nav_bar {
     position: absolute;
-    background: var(--navibar);
     width: 100%;
     margin: 0px;
     height: 0vh;
@@ -113,7 +101,7 @@ Universal styles */
   }
 
   .header .add_cls {
-    height: 30vh;
+    height: 27vh;
   }
 
   .header .nav_bar ul li {
@@ -123,8 +111,8 @@ Universal styles */
   }
 
   .header .nav_bar ul li a {
-    line-height: 50px;
-    font-size: 20px;
+    line-height: 45px;
+    font-size: 15px;
   }
 }
 
@@ -169,15 +157,15 @@ Universal styles */
   align-items: center;
   justify-content: space-between;
   gap: 60px;
-  /* width: 100%; */
   margin: auto;
 }
 
 .profile_image {
   padding: 20px;
+
 }
 
-img {
+.pic_image {
   width: 400px;
   height: 400px;
   border-radius: 50%;
@@ -196,16 +184,21 @@ p {
   text-align: left;
 }
 
+button {
+  border: none;
+  outline: none;
+  margin-top: 30px;
+}
+
 .butts {
 
   display: flex;
-  justify-content: center;
   padding-bottom: 30px
 }
 
 .more_button {
   background: none;
-  margin: 15px;
+  margin: 50px;
   background: none;
   cursor: pointer;
   transition: 0.5s;
@@ -224,15 +217,111 @@ p {
 }
 
 .about_section .research_inte {
-  font-weight: bolder;
-  font-size: 20px;
+  font-style: italic;
+  color: var(--hover);
 }
 
-@media screen and (max-width:930px) {
+@media screen and (max-width:1250px) {
+  .more_button {
+    margin: 20px;
+  }
+
+  h1 {
+    font-size: 50px;
+  }
+}
+
+@media screen and (max-width:1100px) {
+  .home_page {
+    margin: 72px 20px 0px 20px;
+  }
+
   .landing {
+    gap: 10px;
+  }
+
+  .more_button {
+    margin: 5px;
+
+  }
+
+}
+
+@media screen and (max-width:850px) {
+  .profile_image {
+    padding: 10px;
+  }
+
+  .pic_image {
+    width: 300px;
+    height: 300px;
+  }
+
+  h1 {
+    font-size: 40px;
+    padding-bottom: 10px
+  }
+}
+
+@media screen and (max-width:768px) {
+
+  .landing {
+    display: block;
+    gap: 0px;
+    padding: 0px;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width:475px) {
+  h1 {
+    font-size: 30px;
+  }
+
+  .butts {
+    padding: 10px;
+    margin-bottom: 15px;
+  }
+}
+
+@media screen and (max-width:380px) {
+  .home_page {
+    margin: 72px 10px 0px 10px;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  button {
+    margin: 10px 0px 10px;
+  }
+
+  .butts {
     display: block;
   }
 
+  .pic_image {
+    width: 100px;
+    height: 100px;
+  }
+
+  h1 {
+    font-size: 20px;
+
+  }
+
+  .more_button {
+    padding: 5px;
+
+  }
+
+  .about_section .research_inte {
+    font-size: 15px;
+  }
 }
 
 
@@ -247,11 +336,12 @@ p {
 
 .projects_highlight h1 {
   font-size: 40px;
-  padding-top: 40px;
+  /* padding-top: 40px; */
   font-weight: bolder;
   text-align: center;
   color: var(--hover);
 }
+
 
 .projects_highlight .card-wrapper {
 
@@ -338,8 +428,8 @@ p {
 }
 
 .projects_highlight .card-wrapper .project_highlight .card-link:hover .card-button {
-  color: var(--hover);
-  background: var(--bcgc);
+  color: var(--bcgc);
+  background: var(--hover);
   border: none;
 }
 
@@ -355,9 +445,16 @@ p {
   margin-top: -35px;
   margin-left: 15px;
   margin-right: 15px;
+
+
 }
 
 @media screen and (max-width:768px) {
+  .projects_highlight h1 {
+
+    padding-top: 20px;
+  }
+
   .projects_highlight .card-wrapper {
     margin: 0 30px 10px 30px;
   }
@@ -368,10 +465,15 @@ p {
     margin-right: -5px;
   }
 
+  .projects_highlight h1 {
+    font-size: 30px;
+  }
 
 }
 
 @media screen and (max-width:450px) {
+
+  /* padding-top: 40px; */
   .projects_highlight .card-wrapper {
     margin: 0 25px 10px 25px;
     padding: 20px 10px;
@@ -380,18 +482,6 @@ p {
 
   .projects_highlight h1 {
     font-size: 25px;
-  }
-
-  .projects_highlight .card-wrapper .project_highlight .card-link .card-title {
-    font-size: 15px;
-  }
-
-  .projects_highlight .card-wrapper .project_highlight .card-link .badge {
-    font-size: 17px;
-  }
-
-  .projects_highlight .card-wrapper .project_highlight .card-link h3 {
-    font-size: 17px;
   }
 
   .projects_highlight .card-wrapper .swiper-slide-button {
@@ -438,7 +528,7 @@ p {
   }
 
   .projects_highlight .card-wrapper .project_highlight .card-link .badge {
-    font-size: 13px;
+    font-size: 15px;
     padding: 0px;
   }
 
@@ -448,8 +538,7 @@ p {
   }
 
   .projects_highlight .card-wrapper .project_highlight .card-link .card-title {
-    font-size: 12px;
-    padding: 0px;
+    padding: 5px;
   }
 
   .projects_highlight .card-wrapper .project_highlight .card-link .card-button {
@@ -466,13 +555,12 @@ p {
   }
 }
 
-/* Part 5:  Contact page styling */
+/* Part 3:  Contact page styling */
 .contact_page {
   align-items: center;
   display: flex;
   text-align: center;
   justify-content: center;
-  /* border-top: 2px solid var(--hover); */
 
 }
 
@@ -498,21 +586,10 @@ p {
 @media screen and (max-width: 450px) {
   .contact_page .contact_contents {
     padding: 5px;
-    /* display: flex; */
-    z-index: 0;
+    /* z-index: 0; */
   }
 
   .contact_page .contact_contents h1 {
-    font-size: 25px;
-  }
-
-  .contact_page .contact_contents p {
-    font-size: 20px;
-    /* padding: 0px; */
-  }
-
-  .contact_page .contact_contents p a {
-    font-weight: 300px;
     font-size: 20px;
   }
 
@@ -531,19 +608,15 @@ p {
 
 @media screen and (max-width: 375px) {
   .contact_page .contact_contents h1 {
-    font-size: 25px;
-  }
-
-  .contact_page .contact_contents p {
     font-size: 16px;
   }
 
   .contact_page .contact_contents p a {
-    font-size: 8.8px;
+    font-size: 10px;
   }
 }
 
-/* Part 6: Footer stles  */
+/* Part 4: Footer stles  */
 .footer_page {
   align-items: center;
   text-align: center;
@@ -559,25 +632,23 @@ p {
 .footer_page .social_links a {
   text-decoration: none;
   padding: 10px;
-  background-color: black;
+  background-color: var(--bcgc);
   margin: 10px;
-  border-radius: 50%;
-  font-size: 20px;
+  font-size: 25px;
 }
 
 .footer_page .social_links a:hover {
-  background-color: var(--hover);
+  background-color: black;
   transition: 0.5s;
 }
 
 .footer_page .social_links a i {
-  font-size: 28px;
-  color: var(--text);
-  /* text-align: center; */
+  font-size: 30px;
+  color: var(--hover);
 }
 
 .footer_page .social_links a i:hover {
-  color: var(--text);
+  color: var(--hover);
   transition: 0.5s;
 }
 
@@ -586,7 +657,7 @@ p {
   justify-content: center;
   padding: 5px 15px;
   text-align: center;
-  border-top: 2px solid var(--hover);
+  border-top: 1px solid var(--hover);
 
 }
 
@@ -596,23 +667,33 @@ p {
   padding: 15px;
 }
 
+@media screen and (max-width: 475px) {
+  .footer_page .social_links a {
+    font-size: 20px;
+  }
+
+  .footer_page .social_links a i {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 395px) {
+  .footer_page .social_links a {
+    font-size: 18px;
+  }
+
+  .footer_page .social_links a i {
+    font-size: 20px;
+  }
+}
 
 @media screen and (max-width: 375px) {
   .footer_page {
     padding: 5px;
-    z-index: 0;
-  }
-
-  .footer_page h2 {
-    font-size: 20px;
   }
 
   .footer_page .social_links {
     padding: 5px;
-  }
-
-  .currents .works .pics {
-    padding-bottom: 20px;
   }
 
   .footer_page .social_links a {
@@ -625,136 +706,69 @@ p {
     font-size: 15px;
     padding: 3px;
   }
+
+  .footer_bottom p {
+    padding: 5px;
+    font-size: 10px;
+  }
 }
 
 /* Document 2: About html */
 /* Part 2: About Landing Page  */
 .home_landing {
-  margin-top: 60px;
-  padding: 40px;
-  width: 100%;
-  background-color: var(--projectspage);
-  position: relative;
+  margin: 72px 70px 0px 70px;
 }
 
 .home_landing h1 {
-  font-size: 60px;
-  color: var(--button1);
+  font-size: 40px;
+  color: var(--hover);
   font-weight: bolder;
   text-align: center;
+}
+
+
+.home_landing p {
+  padding: 5px;
 }
 
 .home_landing .aboutme_content .me_image {
   height: 500px;
+  width: 500px;
   float: left;
-  margin: 10px;
-  padding: 10px;
-  border-right: 5px solid var(--currentback);
-  padding-right: 40px;
-  margin-right: 40px;
-
+  padding: 10px 20px 5px 0px;
+  object-fit: cover;
+  border-radius: 5%;
 }
 
-.home_landing.about_section {
-  padding-top: 0px;
-
+.home_landing .items {
+  margin: 0px 70px;
 }
 
-.home_landing .about_section p {
-  font-size: 20px;
-  padding: 10px;
-}
-
-.home_landing .about_section p a {
-  color: var(--button1);
-  font-size: 20px;
-}
-
-.home_landing .about_section p a:hover {
-  font-weight: bolder;
-}
-
-.home_landing .about_section .social_links {
-  padding-top: 20px;
-  margin: 10px;
-  text-align: center;
-  padding-bottom: 40px;
-}
-
-.home_landing .about_section .social_links a {
-  text-decoration: none;
-  padding: 15px;
-  background-color: var(--navibar);
-  margin: 40px;
-  border-radius: 50%;
-  font-size: 22px;
-}
-
-.home_landing .about_section .social_links a:hover {
-  background-color: var(--currentback);
-  transition: 0.5s;
-}
-
-.home_landing .about_section .social_links a i {
-
-  color: white;
-  font-size: 32px;
-}
-
-.home_landing .about_section .social_links a i:hover {
-  color: var(--hovercolor);
-  transition: 0.5s;
+.liness {
+  border-top: 1px solid var(--hover);
 }
 
 @media screen and (max-width: 786px) {
 
   .home_landing {
-    /* margin-top: 0px; */
-    padding: 15px;
-    position: relative;
+    margin: 72px 20px 0px 20px;
   }
 
-  .home_landing .about_section {
-    padding: 5px;
-  }
-
-  .home_landing .about_section .social_links {
-    padding-bottom: 20px;
-  }
-
-  .home_landing .about_section .social_links a {
-    margin: 20px;
-    padding: 15px;
-    font-size: 15px;
-  }
-
-  .home_landing .about_section .social_links a i {
-    font-size: 24px;
+  .home_landing .items {
+    margin: 0px 20px;
   }
 
   .home_landing .aboutme_content .me_image {
     width: 80%;
     height: 100%;
-    object-fit: contain;
-    position: relative;
-    padding-right: 0px;
-    border: none;
-    margin-right: 20px;
+
   }
 }
 
-@media screen and (max-width: 450px) {
-  .home_landing {
-    padding: 0px;
-  }
+@media screen and (max-width: 580px) {
 
   .home_landing h1 {
-    font-size: 25px;
-    padding-top: 20px;
-  }
-
-  .home_landing .aboutme_content .me_image {
-    margin-right: 0px;
+    font-size: 30px;
   }
 
   .home_landing .about_section {
@@ -762,751 +776,251 @@ p {
     margin: 0px;
   }
 
-  .home_landing .about_section p {
+  .home_landing .items h3 {
     font-size: 15px;
-  }
-
-  .home_landing .about_section p a {
-    font-size: 15px;
-  }
-
-
-  .home_landing .about_section .social_links a {
-    padding: 10px;
-    margin: 10px;
-    font-size: 18px;
-  }
-
-  .home_landing .about_section .social_links a i {
-
-    margin-top: 0px;
-    font-size: 24px;
   }
 
   .home_landing .aboutme_content .me_image {
-    width: 80%;
-    margin: 20px;
-    /*to remove excess words on the left */
+    width: 100%;
+
+  }
+
+  .home_landing .items h2 {
+    font-size: 30px;
   }
 }
 
 @media screen and (max-width: 375px) {
-  .home_landing {
-    /* margin-top: 0px; */
-    padding: 5px;
-    /* position: relative; */
-  }
-
-  .home_landing .about_section {
+  .home_landing .items {
     padding: 0px;
     margin: 0px;
   }
 
-  .home_landing .about_section p a {
-    font-size: 7px;
-  }
-
-  .home_landing .about_section .social_links {
-    padding-bottom: 10px;
-  }
-
-  .home_landing .about_section .social_links a {
-    padding: 4px;
-    margin: 10px;
-    font-size: 15px;
-  }
-
-  .home_landing .about_section .social_links a i {
-    padding: 4px;
-    margin-top: 0px;
-    font-size: 14px;
+  .home_landing .items h2 {
+    font-size: 18px;
   }
 }
 
-@media screen and (max-width: 205px) {
-  .home_landing .about_section .social_links a {
-    margin: 2px;
-  }
-}
+/* Part 2 - Volunteerism */
 
-@media screen and (max-width: 153px) {
-  .home_landing .about_section .social_links a {
-    margin: 0px;
-  }
-}
-
-/* Part 3: Research Interest */
-.research_interest {
-  padding: 40px;
-  width: 100%;
-  background-color: var(--lightgeneral);
-  position: relative;
-
-}
-
-.research_interest h1 {
+.home_landing h2 {
   font-size: 40px;
-  color: var(--button1);
-  font-weight: bolder;
   text-align: center;
+  color: var(--hover);
+  font-weight: bolder;
+}
+
+.home_landing h3 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.home_landing ol {
   padding-bottom: 10px;
 }
 
-.research_interest h2 {
-  font-size: 30px;
-  color: var(--currentback);
-  font-weight: bold;
-  padding-top: 10px;
-  padding-bottom: 5px;
-
-}
-
-.research_interest p {
-  font-size: 20px;
-  line-height: 2.0;
-  align-items: center;
-  padding: 30px;
-}
-
-.skills {
-  padding: 30px;
-  padding-top: 10px;
-}
-
-.skills ol {
-  padding-left: 40px;
-  padding-top: 0px;
-}
-
-.skills ol li {
-  font-size: 20px;
-  line-height: 1.5;
-}
-
-.skills ol li span {
-  font-size: 20px;
-  font-weight: bold;
-  line-height: 1.5;
-}
-
-button {
-  border: none;
-  outline: none;
-  margin-top: 30px;
-}
-
-.research_interest button {
-  background: none;
-}
-
-.research_interest .resume {
-  font-size: 20px;
-  font-weight: bold;
-  color: var(--navibar);
-  cursor: pointer;
-  transition: 0.5s;
-  text-decoration: none;
-  outline: none;
-  padding: 8px;
-  border: 2px solid var(--navibar);
-  border-radius: 30px;
-}
-
-.research_interest .resume:hover {
-  background: var(--hoverfade);
-  transition: 0.3s;
-  border: none;
-}
-
-
-@media screen and (max-width:450px) {
-
-  .research_interest {
-    padding: 25px;
-  }
-
-  .research_interest h1 {
-    font-size: 25px;
-    padding-bottom: 10px;
-  }
-
-  .research_interest h2 {
-    font-size: 20px;
-  }
-
-  .research_interest p {
-    font-size: 15px;
-    padding-left: 20px;
-  }
-
-  .skills {
-    padding: 20px;
-  }
-
-  .skills ol {
-    padding-left: 20px;
-  }
-
-  .skills ol li {
-    font-size: 15px;
-    line-height: 1.5;
-  }
-
-  .skills ol li span {
-    font-size: 15px;
-    font-weight: bold;
-    line-height: 1.5;
-  }
-
-  button {
-    margin-top: 15px;
-  }
-
-  .research_interest .resume {
-    font-size: 15px;
-    padding: 8px;
-
-  }
-}
-
 @media screen and (max-width: 375px) {
-  .research_interest {
-    padding: 10px;
-  }
-
-  .research_interest h1 {
-    font-size: 25px;
-  }
-
-  .research_interest h2 {
+  .home_landing h2 {
     font-size: 20px;
+
   }
 
-  .research_interest p {
-    font-size: 14px;
-  }
-
-  .skills {
-    padding: 10px;
-  }
-
-  .skills ol {
-    padding-left: 10px;
-  }
-
-  .skills ol li {
-    font-size: 14px;
-    line-height: 1.5;
-  }
-
-  .skills ol li span {
-    font-size: 14px;
-    font-weight: bold;
-    line-height: 1.5;
-  }
-
-  button {
-    margin-top: 5px;
-  }
-
-  .research_interest .resume {
-    font-size: 10px;
-    padding: 7px;
-
+  .home_landing h3 {
+    font-size: 15px;
   }
 }
+
 
 /* Document3: Resume */
 .resume {
-  margin-top: 60px;
-  padding: 40px;
-  padding-bottom: 0px;
-  width: 100%;
-  background-color: var(--lightgeneral);
-  position: relative;
+  margin: 72px 100px 5px 100px;
 }
 
-.resume h1 {
-  font-size: 60px;
-  color: var(--button1);
+
+.resume h2 {
+  font-size: 40px;
+  color: var(--hover);
   font-weight: bolder;
   text-align: center;
 }
 
-@media screen and (max-width: 786px) {
-
-  .resume {
-    padding: 15px;
-    position: relative;
-  }
-}
-
 @media screen and (max-width: 450px) {
   .resume {
-    padding: 0px;
+    margin: 72px 40px 0px 40px;
   }
 
-  .resume h1 {
-    font-size: 25px;
-    padding-top: 20px;
+  .resume h2 {
+    font-size: 30px;
+    padding-top: 0px;
   }
 }
 
 @media screen and (max-width: 375px) {
+
+  .resume h2 {
+    font-size: 20px;
+  }
+
   .resume {
+    margin: 72px 25px 0px 25px;
+  }
+
+}
+
+/* Part 1 Education */
+.education {
+  padding-left: 10px;
+  border-left: 4px solid var(--hover);
+}
+
+.education .dates {
+  font-style: italic;
+}
+
+.education .school {
+  font-size: 20px;
+}
+
+.education .second {
+  padding-bottom: 20px;
+}
+
+.education .program {
+  font-style: italic;
+  color: var(--hover);
+}
+
+/* Research Interest */
+.resume .interest {
+  padding-top: 20px;
+
+}
+
+.resume .interest ul.b {
+  list-style: square;
+}
+
+.resume .mores {
+  font-size: 20px;
+  color: var(--hover);
+  font-style: italic;
+  padding: 5px 10px 0px 10px;
+  margin: 0px;
+}
+
+/* Skills */
+.resume .skills h3 {
+  font-size: 20px;
+  color: var(--hover);
+  font-weight: bold;
+}
+
+@media screen and (max-width:375px) {
+  .education {
+    padding-left: 5px;
+  }
+
+  .education .school {
+    font-size: 15px;
+  }
+
+}
+
+/* Part 4: Certification Page */
+.certification {
+  margin: 20px 50px;
+}
+
+.certification h2 {
+  font-size: 40px;
+  color: var(--hover);
+  text-align: center;
+  font-weight: bolder;
+}
+
+.resume .train {
+  padding: 5px;
+  margin: 10px;
+}
+
+.image_collage {
+  margin: 10px 50px;
+  box-shadow: 0 0 40px black;
+}
+
+.image_collage table {
+  max-width: 100%;
+}
+
+.image_collage td {
+  border-top: 2px solid black;
+  border-right: 2px solid black;
+  width: 25%;
+  box-shadow: 0 0 30px black;
+}
+
+.image_collage td img {
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+}
+
+.image_collage p {
+  padding: 5px;
+}
+
+.image_collage p a {
+  font-size: 15px;
+}
+
+@media screen and (max-width:450px) {
+  .certification p {
+    margin: 10px;
+  }
+
+  .image_collage {
+    margin: 0px 20px;
+  }
+
+  .image_collage p {
+    font-size: 10px;
+  }
+
+  .image_collage p a {
+    font-size: 10px;
+  }
+
+  .certification h2 {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width:450px) {
+  .certification {
+    margin: 5px 10px;
+  }
+
+  .certification h2 {
+    font-size: 18px;
+  }
+
+  .image_collage {
     padding: 5px;
   }
 
 }
 
-
-.my_resume {
-  width: 100%;
-  height: auto;
-  padding: 40px;
-  width: 100%;
-  background-color: var(--projectspage);
-  position: relative;
-  display: grid;
-  place-items: center;
-}
-
-.my_resume h1 {
-  font-size: 60px;
-  color: var(--button1);
-  font-weight: bolder;
-  text-align: center;
-}
-
-.my_resume .heading {
-  font-size: 30px;
-  text-align: center;
-  color: var(--currentback);
-  font-weight: bold;
-  position: relative;
-  margin-bottom: 80px;
-}
-
-
-.resume_timeline {
-  width: 90%;
-  height: auto;
-  position: relative;
-  z-index: 0;
-}
-
-.resume_timeline ul {
-  list-style: none;
-}
-
-.resume_timeline ul::after {
-  position: absolute;
-  content: ' ';
-  width: 2px;
-  height: 100%;
-  background-image: linear-gradient(to bottom, rgb(106, 6, 236), rgb(220, 0, 240));
-  left: 50%;
-  top: 0;
-  transform: translateX(-50%);
-  z-index: 0;
-}
-
-.resume_timeline ul li {
-  width: 50%;
-  height: auto;
-  padding: 15px 20px;
-  background-color: var(--lightgeneral);
-  box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.299);
-  border-radius: 10px;
-  margin-bottom: 30px;
-  z-index: 99;
-  position: relative;
-}
-
-.resume_timeline ul li:nth-child(odd) {
-  float: left;
-  clear: right;
-  transform: translateX(-30px);
-}
-
-.resume_timeline ul li:nth-child(even) {
-  float: right;
-  clear: left;
-  transform: translateX(30px);
-}
-
-/* change 3 to the entry of works */
-.resume_timeline ul li:nth-child(3) {
-  margin-bottom: 0;
-}
-
-.resume_timeline ul li .date {
-  font-size: 25px;
-  font-weight: bold;
-}
-
-.resume_timeline ul li .place {
-  font-size: 15px;
-  font-style: italic;
-  padding-bottom: 10px;
-}
-
-.resume_timeline ul li .title {
-  font-size: 25px;
-  font-weight: bold;
-  padding-bottom: 10px;
-}
-
-.resume_timeline ul li .circle {
-  width: 30px;
-  height: 30px;
-  background-color: var(--button1);
-  border-radius: 50%;
-  position: absolute;
-  top: 0;
-}
-
-.resume_timeline ul li .circle::after {
-  content: ' ';
-  width: 22px;
-  height: 22px;
-  background-color: white;
-  border-radius: 50%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.resume_timeline ul li:nth-child(odd) .circle {
-  right: -30px;
-  transform: translate(50%, -50%);
-}
-
-.resume_timeline ul li:nth-child(even) .circle {
-  left: -30px;
-  transform: translate(-50%, -50%);
-}
-
-ul li p {
-  font-size: 20px;
-}
-
-@media screen and (max-width: 600px) {
-  .resume_timeline ul::after {
-    left: -30px;
-  }
-
-  .resume_timeline ul li {
-    width: 100%;
-    float: none;
-    clear: none;
-    margin-bottom: 80px;
-
-  }
-
-  .resume_timeline ul li:nth-child(odd) {
-    transform: translateX(0);
-
-  }
-
-  .resume_timeline ul li:nth-child(odd) .circle {
-    left: -30px;
-    transform: translate(-50%, -50%);
-  }
-
-  .resume_timeline ul li:nth-child(even) {
-    transform: translateX(0);
-  }
-}
-
-@media screen and (max-width:450px) {
-  .my_resume h1 {
-    font-size: 25px;
-    padding-bottom: 10px;
-  }
-
-  .my_resume .heading {
-    font-size: 20px;
-    margin-bottom: 25px;
-  }
-
-  .resume_timeline ul li .date {
-    font-size: 20px;
-  }
-
-  .resume_timeline ul li .title {
-    font-size: 20px;
-  }
-
-  ul li p {
-    font-size: 15px;
-  }
-}
-
-@media screen and (max-width: 375px) {
-  .my_resume h1 {
-    font-size: 40px;
-  }
-}
-
-@media screen and (max-width: 275px) {
-  .my_resume {
-    padding: 10px;
-    /* display: inline-block; */
-  }
-
-  .resume_timeline ul::after {
-    left: -20px;
-  }
-
-  .my_resume h1 {
-    font-size: 28px;
-    /* margin: 0px; */
-  }
-
-  .my_resume .heading {
-    font-size: 20px;
-  }
-
-  .resume_timeline {
-    padding: 8px;
-  }
-
-  .resume_timeline ul li {
-    padding: 8px 10px;
-  }
-
-  .resume_timeline ul li .date {
-    font-size: 20px;
-  }
-
-  .resume_timeline ul li .place {
-    font-size: 12px;
-  }
-
-  .resume_timeline ul li .title {
-    font-size: 18px;
-  }
-
-  ul li p {
-    font-size: 10px;
-  }
-}
-
-/* Part 3 Education Section  */
-.education {
-  padding: 40px 10%;
-  width: 100%;
-  background-color: var(--lightgeneral);
-  position: relative;
-}
-
-.education h2 {
-  font-size: 40px;
-  color: var(--button1);
-  font-weight: bolder;
-  text-align: center;
-}
-
-.education .education_timeline {
-  padding: 0px 30px;
-  border-left: 2px solid rgb(220, 0, 240);
-}
-
-.education .education_timeline .first {
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-  border-bottom: 2px solid var(--currentback);
-}
-
-.education .education_timeline .first .dates {
-  font-size: 25px;
-  font-weight: bold;
-  color: var(--currentback);
-}
-
-.education .education_timeline .first .program {
-  font-size: 25px;
-  font-weight: bolder;
-}
-
-.education .education_timeline .first .school {
-  font-size: 20px;
-  font-style: italic;
-}
-
-@media screen and (max-width:450px) {
-  .education h2 {
-    font-size: 25px;
-    padding-bottom: 10px;
-  }
-
-  .education .education_timeline .first .dates {
-    font-size: 20px;
-    padding-bottom: 10px;
-  }
-
-  .education .education_timeline .first .program {
-    font-size: 20px;
-    padding-bottom: 10px;
-  }
-
-}
-
-@media screen and (max-width: 375px) {
-  .education {
-    padding: 10px 5%;
-  }
-
-  .education h2 {
-    font-size: 21px;
-  }
-
-  .education .education_timeline {
-    padding: 0px 7px;
-  }
-
-  .education .education_timeline .first .dates {
-    font-size: 20px;
-  }
-
-  .education .education_timeline .first .program {
-    font-size: 16px;
-    font-weight: bolder;
-  }
-
-  .education .education_timeline .first .school {
-    font-size: 14px;
-  }
-}
-
-/* Certification Style  */
-.certification h2 {
-  font-weight: bolder;
-}
-
-/* uploaded resume */
-.cv_buttons {
-  text-align: center;
-}
-
-.cv_buttons button {
-  /* min-width: 150px; */
-  border: 1px solid var(--navibar);
-  border-radius: 50px;
-  padding: 15px 20px;
-  background-color: var(--projectspage);
-  letter-spacing: 1px;
-  cursor: pointer;
-  transition: all 0.4s;
-  margin-top: 20px;
-  /* align-items: center; */
-}
-
-.cv_buttons button:hover {
-  background-color: var(--hoverfade);
-}
-
-.cv_buttons button a {
-  text-decoration: none;
-  font-size: 20px;
-  /* font-weight: 200; */
-  color: var(--navibar);
-  padding: 10px;
-}
-
-.cv_buttons button a:hover {
-  font-weight: bold;
-}
-
-.certification h3 {
-  font-size: 25px;
-  font-weight: bold;
-  color: var(--currentback);
-  padding-top: 20px;
-}
-
-.certification ol {
-  padding-left: 40px;
-}
-
-.certification li {
-  font-size: 20px;
-  padding: 3px;
-}
-
-.certification .train {
-  padding-top: 20px;
-}
-
-@media screen and (max-width:450px) {
-  .certification h2 {
-    font-size: 20px;
-    padding-bottom: 0px;
-  }
-
-  .certification h3 {
-    font-size: 17px;
-  }
-
-  .certification li {
-    font-size: 15px;
-  }
-
-  .cv_buttons button {
-    padding: 8px;
-  }
-
-  .cv_buttons button a {
-    font-size: 15px;
-  }
-
-}
-
-@media screen and (max-width: 380px) {
-  .certification h2 {
-    font-size: 19px;
-  }
-
-  .cv_buttons button {
-    padding: 10px 10px;
-    border-radius: 25px;
-
-  }
-
-  .certification a {
-    font-size: 15px;
-    padding: 0px;
-  }
-
-  .certification h3 {
-    font-size: 18px;
-  }
-
-  .certification ol {
-    padding-left: 18px;
-  }
-
-  .certification li {
-    font-size: 14px;
-  }
-
-}
 
 
 /* Document 4 : Portifolio */
 .portfolio_page {
-  margin-top: 60px;
-  width: 100%;
-  position: relative;
-  background-color: rgba(117, 151, 164, 0.46);
+  margin: 15px 20px;
 }
 
 .portfolio_page h1 {
   font-size: 60px;
   padding-top: 40px;
-  color: var(--button1);
+  color: var(--hover);
   font-weight: bolder;
   text-align: center;
 }
@@ -1516,31 +1030,32 @@ ul li p {
 }
 
 .portfolio_page button {
-  font-size: 20px;
+  /* font-size: 20px; */
   font-weight: bold;
   justify-content: left;
   padding: 5px;
   margin: 2px;
-  background-color: rgba(16, 15, 15, 0.207);
+  background-color: black;
   cursor: pointer;
   border-radius: 4px;
   transition: all 0.3s ease-in-out;
 }
 
 .portfolio_page button:hover {
-  background-color: rgba(16, 15, 15, 0.407);
+  background-color: var(--hover);
+  color: black;
 
 }
 
 .portfolio_page button.active-button {
-  background-color: var(--currentback);
-  color: var(--hovercolor);
+  background-color: var(--hover);
+  color: black;
 }
 
 @media screen and (max-width:450px) {
 
   .portfolio_page h1 {
-    font-size: 25px;
+    font-size: 40px;
     padding-bottom: 15px;
   }
 
@@ -1555,7 +1070,7 @@ ul li p {
 
 @media screen and (max-width:375px) {
   .portfolio_page h1 {
-    font-size: 20px;
+    font-size: 30px;
     padding: 20px;
     padding-left: 10px;
   }
@@ -1572,15 +1087,17 @@ ul li p {
   width: 100%;
   padding-left: 40px;
   padding-bottom: 40px;
-  /* background-color: var(--projectspage); */
 }
 
 .portfolio_section .portfolio_item {
-  border: 10px solid var(--currentback);
+  border: 10px solid black;
   margin: 5px;
   width: 32%;
+  box-shadow: 0 0 40px black;
+}
 
-  background-color: var(--currentback);
+.portfolio_section .portfolio_item:hover {
+  border: 10px solid var(--hover);
 }
 
 .portfolio_section .portfolio_item .portfolio_item_inner .portfolio_image img {
@@ -1593,7 +1110,8 @@ ul li p {
 }
 
 .portfolio_section .portfolio_item .portfolio_item_inner .portfolio_image a h3 {
-  font-size: 20px;
+  font-size: 15px;
+  padding: 5px;
   font-weight: bold;
 }
 
@@ -1618,9 +1136,6 @@ ul li p {
     padding-left: 30px;
   }
 
-  .portfolio_section .portfolio_item .portfolio_item_inner .portfolio_image a h3 {
-    font-size: 17px;
-  }
 }
 
 @media screen and (max-width:375px) {
@@ -1633,9 +1148,6 @@ ul li p {
     object-fit: contain;
   }
 
-  .portfolio_section .portfolio_item .portfolio_item_inner .portfolio_image a h3 {
-    font-size: 14px;
-  }
 }
 
 
@@ -1645,16 +1157,7 @@ ul li p {
   margin-top: 40px;
   padding: 60px;
   width: 100%;
-  background-color: var(--lightgeneral);
   position: relative;
-}
-
-.image_title h1 {
-  font-size: 60px;
-  color: var(--button1);
-  font-weight: bolder;
-  text-align: center;
-  padding-bottom: 20px;
 }
 
 .image_title .intro {
@@ -1668,7 +1171,7 @@ ul li p {
 .image_title .intro .image {
   flex: 1;
   max-width: 50%;
-  border-right: 5px solid var(--currentback);
+  border-right: 2px solid var(--hover);
   padding-right: 40px;
 }
 
@@ -1684,14 +1187,14 @@ ul li p {
 }
 
 .image_title .intro .text h2 {
-  font-size: 40px;
+  font-size: 30px;
   font-weight: bold;
   padding-bottom: 20px;
-  color: var(--currentback);
+  color: var(--hover);
 }
 
 .image_title .intro .text p {
-  font-size: 20px;
+  font-size: 15px;
   padding: 5px;
   font-style: italic;
   padding-bottom: 10px;
@@ -1700,19 +1203,18 @@ ul li p {
 .image_title .intro .text .button {
   display: inline-block;
   padding: 10px 20px;
-  border: 2px solid var(--navibar);
+  border: 1px solid var(--hover);
   border-radius: 20px;
   text-decoration: none;
-  color: var(--navibar);
   font-weight: bold;
-  font-size: 20px;
+  font-size: 15px;
   transition: 0.3s ease;
 }
 
 .image_title .intro .text .button:hover {
-  background-color: var(--hoverfade);
+  background-color: var(--hover);
   border: none;
-  color: var(--hovercolor);
+  color: black;
 }
 
 @media screen and (max-width:610px) {
@@ -1729,7 +1231,7 @@ ul li p {
 
   .image_title .intro .text .button {
     padding: 10px;
-    font-size: 17px;
+    font-size: 15px;
   }
 }
 
@@ -1738,10 +1240,6 @@ ul li p {
     padding: 30px;
   }
 
-  .image_title h1 {
-    font-size: 25px;
-    padding: 20px;
-  }
 
   .image_title .intro {
     display: block;
@@ -1765,7 +1263,7 @@ ul li p {
   }
 
   .image_title .intro .text h2 {
-    font-size: 20px;
+    font-size: 15px;
     padding: 10px;
   }
 
@@ -1797,20 +1295,19 @@ ul li p {
 
 /* part 2 Credits. */
 .credits {
-  padding: 40px;
   display: flex;
   justify-content: space-evenly;
   background-color: var(--contactbackground);
 }
 
 .credits h3 {
-  font-size: 25px;
+  font-size: 15px;
   color: var(--currentback);
   font-weight: bold;
 }
 
 .credits p {
-  font-size: 20px;
+  font-size: 15px;
 }
 
 @media screen and (max-width:786px) {
@@ -1821,7 +1318,7 @@ ul li p {
 
 @media screen and (max-width:450px) {
   .credits h3 {
-    font-size: 17px;
+    font-size: 15px;
   }
 
   .credits p {
@@ -1854,52 +1351,52 @@ ul li p {
 }
 
 .project h2 {
-  font-size: 40px;
+  font-size: 20px;
   font-weight: bold;
-  color: var(--currentback);
+  color: var(--hover);
   padding-bottom: 10px;
 }
 
 .project p {
-  font-size: 20px;
+  font-size: 15px;
   padding: 5px;
 }
 
 .project h3 {
-  font-size: 25px;
+  font-size: 15px;
   font-weight: bold;
   padding-top: 20px;
   padding-bottom: 20px;
-  color: var(--currentback);
 }
 
 .project a {
   text-decoration: none;
 
+
 }
 
 .project a p {
-  font-size: 20px;
-
-  color: var(--navibar);
+  font-size: 15px;
   font-weight: bold;
 }
 
 .project a p span {
-  font-size: 20px;
+  font-size: 15px;
 }
 
 .project .result_links a p {
   margin-bottom: 20px;
   cursor: pointer;
   padding-bottom: 20px;
-  border-bottom: 2px solid var(--currentback);
-  background-color: var(--projectspage);
+  border-bottom: 2px solid var(--hover);
 }
 
 .project .result_links a p:hover {
-  background-color: var(--contactbackground)
+  background-color: var(--hover);
+  color: black;
+
 }
+
 
 @media screen and (max-width:450px) {
   .project {
@@ -1915,7 +1412,7 @@ ul li p {
   }
 
   .project h3 {
-    font-size: 17px;
+    font-size: 15px;
     padding-top: 10px;
     padding-bottom: 10px;
   }
@@ -1945,156 +1442,6 @@ ul li p {
 }
 
 /* Document 6: Maps Collection:  */
-/* .maps_body{
-  margin-top: 60px;
-  width: 100%;
-  position: relative;
-} */
-.maps_welcome {
-  margin-top: 40px;
-  padding: 60px 20px 0 40px;
-  background-color: var(--contactbackground);
-}
-
-.maps_welcome h1 {
-  font-size: 60px;
-  font-weight: bolder;
-  color: var(--button1);
-  text-align: center;
-  padding-bottom: 0;
-}
-
-.maps_welcome h2 {
-  font-size: 40px;
-  color: var(--currentback);
-  font-weight: bolder;
-}
-
-.maps_welcome p {
-  font-size: 20px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-.maps_collage {
-  padding: 10px 40px 40px 40px;
-  width: 100%;
-  background-color: var(--hoverfade);
-}
-
-.maps_collage table {
-  max-width: 100%;
-  border: 2px solid var(--button1);
-}
-
-.maps_collage .head {
-  border: 2px solid var(--navibar);
-  text-align: center;
-  font-size: 30px;
-  font-weight: bold;
-
-}
-
-.maps_collage td {
-  border: 2px solid black;
-  width: 25%;
-}
-
-.maps_collage td img {
-  width: 100%;
-  padding: 5px;
-
-}
-
-.maps_collage p {
-  padding: 5px;
-  font-size: 15px;
-}
-
-
-@media screen and (max-width:450px) {
-  .maps_welcome {
-    margin-top: 20px;
-    padding: 60px 20px 0 20px;
-    background-color: var(--contactbackground);
-  }
-
-  .maps_welcome h1 {
-    font-size: 25px;
-
-  }
-
-  .maps_welcome h2 {
-    font-size: 20px;
-  }
-
-  .maps_welcome p {
-    font-size: 15px;
-    padding-bottom: 10px;
-  }
-
-  .maps_collage {
-    padding: 10px 20px 20px 20px;
-  }
-
-  .maps_collage .head {
-    font-size: 20px;
-  }
-
-  .maps_collage td img {
-    padding: 5px;
-  }
-
-  .maps_collage p {
-    font-size: 8px;
-  }
-
-  .maps_collage p a {
-    font-size: 8px;
-  }
-}
-
-@media screen and (max-width:375px) {
-  .maps_welcome {
-    margin-top: 20px;
-    padding: 60px 5px 0 5px;
-    background-color: var(--contactbackground);
-  }
-
-  .maps_welcome h1 {
-    font-size: 20px;
-
-  }
-
-  .maps_welcome h2 {
-    font-size: 18px;
-  }
-
-  .maps_welcome p {
-    font-size: 15px;
-    padding-bottom: 10px;
-  }
-
-  .maps_collage {
-    padding: 5px 5px 5px 5px;
-  }
-
-  .maps_collage .head {
-    font-size: 12px;
-  }
-
-  .maps_collage td img {
-    padding: 1px;
-  }
-
-  .maps_collage p {
-    font-size: 5px;
-  }
-
-  .maps_collage p a {
-    font-size: 5px;
-  }
-}
 
 
 
@@ -2122,7 +1469,7 @@ ul li p {
 }
 
 .objectives ul li a {
-  font-size: 20px;
+  font-size: 15px;
 }
 
 .method {
