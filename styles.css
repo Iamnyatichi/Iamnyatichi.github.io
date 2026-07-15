@@ -96,11 +96,11 @@ Universal styles */
     left: 0;
     overflow: hidden;
     transition: 0.3s;
-    /* border-bottom: 1px solid red; */
+    border-bottom: 1px solid var(--hover);
   }
 
   .header .add_cls {
-    height: 27vh;
+    height: 30vh;
   }
 
   .header .nav_bar ul li {
@@ -117,7 +117,7 @@ Universal styles */
 
 @media screen and (max-width:450px) {
   .header .nav_bar ul {
-    line-height: 15px;
+    line-height: 150px;
   }
 
 }
@@ -127,13 +127,7 @@ Universal styles */
     margin: 0;
   }
 
-  .header .nav_bar ul li a {
-    font-size: 20px;
-    /* line-height: 60px; */
-    padding: 0px;
-  }
-
-}
+ }
 
 /* part 2: home landing page styles */
 .home_page {
