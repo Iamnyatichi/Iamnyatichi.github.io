@@ -127,7 +127,7 @@ Universal styles */
     margin: 0;
   }
 
- }
+}
 
 /* part 2: home landing page styles */
 .home_page {
@@ -1046,10 +1046,12 @@ button {
 }
 
 @media screen and (max-width:450px) {
+  .portfolio_page {
+    margin: 40px 20px;
+  }
 
   .portfolio_page h1 {
     font-size: 40px;
-    padding-bottom: 15px;
   }
 
   .portfolio_page .all_buttons {
@@ -1062,9 +1064,12 @@ button {
 }
 
 @media screen and (max-width:375px) {
+  .portfolio_page {
+    margin: 40px 10px;
+  }
+
   .portfolio_page h1 {
-    font-size: 30px;
-    padding: 20px;
+    font-size: 20px;
     padding-left: 10px;
   }
 
