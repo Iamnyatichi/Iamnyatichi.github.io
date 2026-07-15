@@ -96,7 +96,7 @@ Universal styles */
     left: 0;
     overflow: hidden;
     transition: 0.3s;
-    border-bottom: 1px solid var(--hover);
+    /* border-bottom: 1px solid red; */
   }
 
   .header .add_cls {
