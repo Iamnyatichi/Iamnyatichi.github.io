@@ -66,8 +66,8 @@ Universal styles */
 
 .header .menu_icon {
   font-size: 30px;
-  color: var(--hover);
   cursor: pointer;
+  color: var(--hover);
 }
 
 .menu {
@@ -118,6 +118,11 @@ Universal styles */
 @media screen and (max-width:450px) {
   .header .nav_bar ul {
     line-height: 15px;
+  }
+
+  .header .nav_bar ul li a {
+    /* line-height: 60px; */
+    padding: 0px;
   }
 
 }
