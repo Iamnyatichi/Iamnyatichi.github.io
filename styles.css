@@ -103,13 +103,17 @@ Universal styles */
 
   .header .add_cls {
     height: 27vh;
-    border-bottom: 2px solid var(--hover);
+    /* border-bottom: 2px solid var(--hover); */
   }
 
   .header .nav_bar ul li {
     display: block;
     text-align: center;
     border-top: 1px solid var(--hover);
+  }
+
+  .header .nav_bar ul li:last-child {
+       border-bottom: 1px solid var(--hover);
   }
 
   .header .nav_bar ul li a {
@@ -842,10 +846,11 @@ button {
   margin: 72px 100px 5px 100px;
 }
 
-.resume h1{
+.resume h1 {
   text-align: center;
   padding-bottom: 0px;
 }
+
 .resume h2 {
   font-size: 40px;
   color: var(--hover);
@@ -860,9 +865,10 @@ button {
 }
 
 @media screen and (max-width: 450px) {
-  .resume h1{
+  .resume h1 {
     font-size: 40px;
   }
+
   .resume h2 {
     font-size: 30px;
     padding-top: 0px;
