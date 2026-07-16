@@ -80,7 +80,7 @@ Universal styles */
     margin: 0px;
     justify-content: space-between;
     height: 0px;
-    
+
 
   }
 
@@ -102,7 +102,7 @@ Universal styles */
   }
 
   .header .add_cls {
-    height: 27vh;
+    height: 30vh;
   }
 
   .header .nav_bar ul li {
@@ -755,7 +755,8 @@ button {
 @media screen and (max-width: 786px) {
 
   .home_landing {
-    margin: 72px 20px 0px 20px;
+    margin: 50px 20px 0px 20px;
+
   }
 
   .home_landing .items {
@@ -840,7 +841,10 @@ button {
   margin: 72px 100px 5px 100px;
 }
 
-
+.resume h1{
+  text-align: center;
+  padding-bottom: 0px;
+}
 .resume h2 {
   font-size: 40px;
   color: var(--hover);
@@ -848,11 +852,16 @@ button {
   text-align: center;
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 768px) {
   .resume {
-    margin: 72px 40px 0px 40px;
+    margin: 50px 40px 0px 40px;
   }
+}
 
+@media screen and (max-width: 450px) {
+  .resume h1{
+    font-size: 40px;
+  }
   .resume h2 {
     font-size: 30px;
     padding-top: 0px;
