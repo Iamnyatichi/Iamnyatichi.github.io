@@ -80,11 +80,13 @@ Universal styles */
     margin: 0px;
     justify-content: space-between;
     height: 0px;
+    
 
   }
 
   .header .menu {
     display: block;
+    border-bottom: 1px solid var(--hover);
   }
 
   .header .nav_bar {
@@ -96,7 +98,7 @@ Universal styles */
     left: 0;
     overflow: hidden;
     transition: 0.3s;
-    border-bottom: 1px solid var(--hover);
+    /* border-bottom: 1px solid var(--hover); */
   }
 
   .header .add_cls {
@@ -262,6 +264,10 @@ button {
 }
 
 @media screen and (max-width:768px) {
+  .home_page {
+    margin-top: 50px;
+
+  }
 
   .landing {
     display: block;
