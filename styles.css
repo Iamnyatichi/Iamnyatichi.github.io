@@ -1138,15 +1138,9 @@ button {
   text-align: left;
 }
 
-.image_title .intro .text h2 {
-  font-size: 30px;
-  font-weight: bold;
-  padding-bottom: 20px;
-  color: var(--hover);
-}
+
 
 .image_title .intro .text p {
-  font-size: 15px;
   padding: 5px;
   font-style: italic;
   padding-bottom: 10px;
@@ -1159,7 +1153,6 @@ button {
   border-radius: 20px;
   text-decoration: none;
   font-weight: bold;
-  font-size: 15px;
   transition: 0.3s ease;
 }
 
@@ -1183,7 +1176,6 @@ button {
 
   .image_title .intro .text .button {
     padding: 10px;
-    font-size: 15px;
   }
 }
 
@@ -1215,18 +1207,15 @@ button {
   }
 
   .image_title .intro .text h2 {
-    font-size: 15px;
     padding: 10px;
   }
 
   .image_title .intro .text p {
-    font-size: 15px;
     padding: 10px;
   }
 
   .image_title .intro .text .button {
     padding: 8px;
-    font-size: 15px;
   }
 }
 
@@ -1236,31 +1225,17 @@ button {
   }
 
   .image_title h1 {
-    font-size: 20px;
     padding-left: 0;
   }
 
-  .image_title .intro .text .button {
-    font-size: 15px;
-  }
 }
 
 /* part 2 Credits. */
 .credits {
   display: flex;
   justify-content: space-evenly;
-  background-color: var(--contactbackground);
 }
 
-.credits h3 {
-  font-size: 15px;
-  color: var(--currentback);
-  font-weight: bold;
-}
-
-.credits p {
-  font-size: 15px;
-}
 
 @media screen and (max-width:786px) {
   .credits {
@@ -1268,15 +1243,6 @@ button {
   }
 }
 
-@media screen and (max-width:450px) {
-  .credits h3 {
-    font-size: 15px;
-  }
-
-  .credits p {
-    font-size: 15px;
-  }
-}
 
 @media screen and (max-width:375px) {
   .credits {
@@ -1299,13 +1265,9 @@ button {
 /* Part 3: Proj prief Description*/
 .project {
   padding: 40px;
-  background-color: var(--projectspage);
 }
 
 .project h2 {
-  font-size: 20px;
-  font-weight: bold;
-  color: var(--hover);
   padding-bottom: 10px;
 }
 
@@ -1315,8 +1277,6 @@ button {
 }
 
 .project h3 {
-  font-size: 15px;
-  font-weight: bold;
   padding-top: 20px;
   padding-bottom: 20px;
 }
@@ -1328,7 +1288,6 @@ button {
 }
 
 .project a p {
-  font-size: 15px;
   font-weight: bold;
 }
 
@@ -1355,35 +1314,18 @@ button {
     padding: 20px;
   }
 
-  .project h2 {
-    font-size: 20px;
-  }
-
-  .project p {
-    font-size: 15px;
-  }
-
   .project h3 {
-    font-size: 15px;
     padding-top: 10px;
     padding-bottom: 10px;
   }
 
-  .project a p {
-    font-size: 15px;
+  
 
-  }
-
-  .project a p span {
-    font-size: 15px;
-  }
 
   .project .result_links a p {
     margin-bottom: 20px;
     cursor: pointer;
     padding-bottom: 20px;
-    border-bottom: 2px solid var(--currentback);
-    background-color: var(--projectspage);
   }
 }
 
@@ -1393,10 +1335,8 @@ button {
   }
 }
 
+
 /* Document 6: Maps Collection:  */
-
-
-
 /* Kisii LULC Project  */
 .objectives {
   margin-bottom: 20px;
